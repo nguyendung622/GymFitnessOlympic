@@ -35,7 +35,7 @@ namespace GymFitnessOlympic.View
             FormMain.User = null;
             lblLoginStatus.Text = "Chưa đăng nhập";
             rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = false;
-
+            rbBtnChangePassword.Enabled = rbBtnRole.Enabled = false;
             rbTabManager.Visible = rbTabOperator.Visible = rbTabStatistics.Visible = false;
             LoadUcWelcome();
         }
@@ -48,7 +48,8 @@ namespace GymFitnessOlympic.View
                 FormMain.User.UserName, FormMain.User.Role);
             var isAdmin = user.Role == (int)VAITRO.Admin;
             rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = true;
-            rbTabManager.Visible = isAdmin;
+            rbBtnChangePassword.Enabled = true;
+            rbBtnRole.Enabled = rbTabManager.Visible = isAdmin;
             rbTabOperator.Visible = rbTabStatistics.Visible = true;
             /*
              * Phần quyền sử dụng hệ thống

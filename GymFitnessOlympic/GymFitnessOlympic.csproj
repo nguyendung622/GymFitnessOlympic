@@ -186,6 +186,7 @@
     <Content Include="Resources\statistics2.png" />
     <Content Include="Resources\statistics3.png" />
     <Content Include="Resources\statistics4.png" />
+    <Content Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
