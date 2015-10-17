@@ -132,7 +132,7 @@
             // 
             // ribbonButton3
             // 
-            this.ribbonButton3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.Image")));
+            this.ribbonButton3.Image = global::GymFitnessOlympic.Properties.Resources.location;
             this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
             this.ribbonButton3.Text = "Phòng tập";
             // 
@@ -285,36 +285,36 @@
             // ribbonOrbMenuItem1
             // 
             this.ribbonOrbMenuItem1.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.Image")));
-            this.ribbonOrbMenuItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.SmallImage")));
+            this.ribbonOrbMenuItem1.Image = global::GymFitnessOlympic.Properties.Resources.loginlarge;
+            this.ribbonOrbMenuItem1.SmallImage = global::GymFitnessOlympic.Properties.Resources.loginlarge;
             this.ribbonOrbMenuItem1.Text = "Đăng nhập";
             // 
             // ribbonOrbMenuItem2
             // 
             this.ribbonOrbMenuItem2.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.Image")));
-            this.ribbonOrbMenuItem2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.SmallImage")));
+            this.ribbonOrbMenuItem2.Image = global::GymFitnessOlympic.Properties.Resources.logoutlarge;
+            this.ribbonOrbMenuItem2.SmallImage = global::GymFitnessOlympic.Properties.Resources.logoutlarge;
             this.ribbonOrbMenuItem2.Text = "Đăng xuất";
             // 
             // ribbonOrbMenuItem3
             // 
             this.ribbonOrbMenuItem3.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.Image")));
-            this.ribbonOrbMenuItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.SmallImage")));
+            this.ribbonOrbMenuItem3.Image = global::GymFitnessOlympic.Properties.Resources.changepassword;
+            this.ribbonOrbMenuItem3.SmallImage = global::GymFitnessOlympic.Properties.Resources.changepassword;
             this.ribbonOrbMenuItem3.Text = "Đổi mật khẩu";
             // 
             // ribbonOrbMenuItem4
             // 
             this.ribbonOrbMenuItem4.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.Image")));
-            this.ribbonOrbMenuItem4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.SmallImage")));
+            this.ribbonOrbMenuItem4.Image = global::GymFitnessOlympic.Properties.Resources.permission;
+            this.ribbonOrbMenuItem4.SmallImage = global::GymFitnessOlympic.Properties.Resources.permission;
             this.ribbonOrbMenuItem4.Text = "Phân quyền";
             // 
             // ribbonOrbMenuItem5
             // 
             this.ribbonOrbMenuItem5.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem5.Image")));
-            this.ribbonOrbMenuItem5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem5.SmallImage")));
+            this.ribbonOrbMenuItem5.Image = global::GymFitnessOlympic.Properties.Resources.about;
+            this.ribbonOrbMenuItem5.SmallImage = global::GymFitnessOlympic.Properties.Resources.about;
             this.ribbonOrbMenuItem5.Text = "Thông tin trợ giúp";
             // 
             // ribbonOrbOptionButton1
