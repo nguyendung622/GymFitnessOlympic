@@ -73,7 +73,7 @@
             this.rbMain.OrbDropDown.BorderRoundness = 8;
             this.rbMain.OrbDropDown.Location = new System.Drawing.Point(0, 0);
             this.rbMain.OrbDropDown.Name = "";
-            this.rbMain.OrbDropDown.Size = new System.Drawing.Size(527, 447);
+            this.rbMain.OrbDropDown.Size = new System.Drawing.Size(527, 72);
             this.rbMain.OrbDropDown.TabIndex = 0;
             this.rbMain.OrbImage = null;
             this.rbMain.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2013;
@@ -97,15 +97,17 @@
             // 
             this.ribbonButton1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.Image")));
             this.ribbonButton1.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
-            this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
+            this.ribbonButton1.SmallImage = global::GymFitnessOlympic.Properties.Resources.loginsmall;
             this.ribbonButton1.Text = "ribbonButton1";
+            this.ribbonButton1.ToolTip = "Đăng nhập";
             // 
             // ribbonButton2
             // 
             this.ribbonButton2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.Image")));
             this.ribbonButton2.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
-            this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
+            this.ribbonButton2.SmallImage = global::GymFitnessOlympic.Properties.Resources.logoutsmall;
             this.ribbonButton2.Text = "ribbonButton2";
+            this.ribbonButton2.ToolTip = "Đăng xuất";
             // 
             // ribbonTab1
             // 
