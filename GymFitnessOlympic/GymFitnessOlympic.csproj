@@ -99,6 +99,18 @@
     <Compile Include="View\UserControls\Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Utils\BaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Utils\BaseDialog.designer.cs">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Utils\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Utils\BaseForm.designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Utils\DialogUtils.cs" />
     <Compile Include="View\Utils\WinFormsUtils.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Utils\BaseDialog.resx">
+      <DependentUpon>BaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Utils\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

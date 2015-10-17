@@ -30,50 +30,51 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.rbMain = new System.Windows.Forms.Ribbon();
+            this.rbTabManager = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
+            this.rbTabOperator = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
+            this.rbTabStatistics = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblLoginStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.rbBtnLogin = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem7 = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem8 = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem9 = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.rbBtnLogout = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.rbBtnChangePassword = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.rbBtnRole = new System.Windows.Forms.RibbonOrbMenuItem();
             this.rbBtnAbout = new System.Windows.Forms.RibbonOrbMenuItem();
             this.rbBtnLoginQuick = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
+            this.rbBtnLogoutQuick = new System.Windows.Forms.RibbonButton();
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton16 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton17 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton18 = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton20 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
-            this.pnMain = new System.Windows.Forms.Panel();
             this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem2 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem3 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem4 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem5 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbOptionButton1 = new System.Windows.Forms.RibbonOrbOptionButton();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblLoginStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.rbBtnUpdate = new System.Windows.Forms.RibbonOrbMenuItem();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,12 +90,13 @@
             this.rbMain.OrbDropDown.BorderRoundness = 8;
             this.rbMain.OrbDropDown.Location = new System.Drawing.Point(0, 0);
             this.rbMain.OrbDropDown.MenuItems.Add(this.rbBtnLogin);
-            this.rbMain.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem7);
-            this.rbMain.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem8);
-            this.rbMain.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem9);
+            this.rbMain.OrbDropDown.MenuItems.Add(this.rbBtnLogout);
+            this.rbMain.OrbDropDown.MenuItems.Add(this.rbBtnChangePassword);
+            this.rbMain.OrbDropDown.MenuItems.Add(this.rbBtnRole);
             this.rbMain.OrbDropDown.MenuItems.Add(this.rbBtnAbout);
+            this.rbMain.OrbDropDown.MenuItems.Add(this.rbBtnUpdate);
             this.rbMain.OrbDropDown.Name = "";
-            this.rbMain.OrbDropDown.Size = new System.Drawing.Size(527, 292);
+            this.rbMain.OrbDropDown.Size = new System.Drawing.Size(527, 336);
             this.rbMain.OrbDropDown.TabIndex = 0;
             this.rbMain.OrbImage = null;
             this.rbMain.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2013;
@@ -103,16 +105,105 @@
             // 
             // 
             this.rbMain.QuickAcessToolbar.Items.Add(this.rbBtnLoginQuick);
-            this.rbMain.QuickAcessToolbar.Items.Add(this.ribbonButton2);
+            this.rbMain.QuickAcessToolbar.Items.Add(this.rbBtnLogoutQuick);
             this.rbMain.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
             this.rbMain.Size = new System.Drawing.Size(912, 154);
             this.rbMain.TabIndex = 0;
-            this.rbMain.Tabs.Add(this.ribbonTab1);
-            this.rbMain.Tabs.Add(this.ribbonTab2);
-            this.rbMain.Tabs.Add(this.ribbonTab3);
+            this.rbMain.Tabs.Add(this.rbTabManager);
+            this.rbMain.Tabs.Add(this.rbTabOperator);
+            this.rbMain.Tabs.Add(this.rbTabStatistics);
             this.rbMain.TabsMargin = new System.Windows.Forms.Padding(12, 26, 20, 0);
             this.rbMain.Text = "ribbon1";
             this.rbMain.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
+            // 
+            // rbTabManager
+            // 
+            this.rbTabManager.Panels.Add(this.ribbonPanel1);
+            this.rbTabManager.Panels.Add(this.ribbonPanel2);
+            this.rbTabManager.Panels.Add(this.ribbonPanel6);
+            this.rbTabManager.Text = "Quản lý phòng GYM";
+            // 
+            // ribbonPanel1
+            // 
+            this.ribbonPanel1.Items.Add(this.ribbonButton3);
+            this.ribbonPanel1.Items.Add(this.ribbonButton4);
+            this.ribbonPanel1.Items.Add(this.ribbonButton5);
+            this.ribbonPanel1.Items.Add(this.ribbonButton6);
+            this.ribbonPanel1.Text = "Danh mục";
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.Items.Add(this.ribbonButton7);
+            this.ribbonPanel2.Text = "Sản phẩm bán";
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.ribbonButton16);
+            this.ribbonPanel6.Items.Add(this.ribbonButton14);
+            this.ribbonPanel6.Items.Add(this.ribbonButton17);
+            this.ribbonPanel6.Items.Add(this.ribbonButton18);
+            this.ribbonPanel6.Text = "Thống kê";
+            // 
+            // rbTabOperator
+            // 
+            this.rbTabOperator.Panels.Add(this.ribbonPanel3);
+            this.rbTabOperator.Panels.Add(this.ribbonPanel5);
+            this.rbTabOperator.Panels.Add(this.ribbonPanel4);
+            this.rbTabOperator.Text = "Tác nghiệp";
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.Items.Add(this.ribbonButton9);
+            this.ribbonPanel3.Items.Add(this.ribbonButton10);
+            this.ribbonPanel3.Text = "Nhân viên";
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.Items.Add(this.ribbonButton19);
+            this.ribbonPanel5.Items.Add(this.ribbonButton8);
+            this.ribbonPanel5.Text = "Sản phẩm";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.Items.Add(this.ribbonButton11);
+            this.ribbonPanel4.Items.Add(this.ribbonButton20);
+            this.ribbonPanel4.Items.Add(this.ribbonButton13);
+            this.ribbonPanel4.Text = "Hội viên";
+            // 
+            // rbTabStatistics
+            // 
+            this.rbTabStatistics.Panels.Add(this.ribbonPanel7);
+            this.rbTabStatistics.Text = "Thống kê";
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.Items.Add(this.ribbonButton12);
+            this.ribbonPanel7.Items.Add(this.ribbonButton15);
+            this.ribbonPanel7.Text = "Thống kê cá nhân";
+            // 
+            // pnMain
+            // 
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(0, 154);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(912, 218);
+            this.pnMain.TabIndex = 1;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblLoginStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(912, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblLoginStatus
+            // 
+            this.lblLoginStatus.Name = "lblLoginStatus";
+            this.lblLoginStatus.Size = new System.Drawing.Size(71, 17);
+            this.lblLoginStatus.Text = "Login status";
             // 
             // rbBtnLogin
             // 
@@ -122,26 +213,27 @@
             this.rbBtnLogin.Text = "Đăng nhập";
             this.rbBtnLogin.Click += new System.EventHandler(this.rbBtnLogin_Click);
             // 
-            // ribbonOrbMenuItem7
+            // rbBtnLogout
             // 
-            this.ribbonOrbMenuItem7.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem7.Image = global::GymFitnessOlympic.Properties.Resources.logoutlarge;
-            this.ribbonOrbMenuItem7.SmallImage = global::GymFitnessOlympic.Properties.Resources.logoutlarge;
-            this.ribbonOrbMenuItem7.Text = "Đăng xuất";
+            this.rbBtnLogout.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.rbBtnLogout.Image = global::GymFitnessOlympic.Properties.Resources.logoutlarge;
+            this.rbBtnLogout.SmallImage = global::GymFitnessOlympic.Properties.Resources.logoutlarge;
+            this.rbBtnLogout.Text = "Đăng xuất";
+            this.rbBtnLogout.Click += new System.EventHandler(this.rbBtnLogout_Click);
             // 
-            // ribbonOrbMenuItem8
+            // rbBtnChangePassword
             // 
-            this.ribbonOrbMenuItem8.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem8.Image = global::GymFitnessOlympic.Properties.Resources.changepassword;
-            this.ribbonOrbMenuItem8.SmallImage = global::GymFitnessOlympic.Properties.Resources.changepassword;
-            this.ribbonOrbMenuItem8.Text = "Đổi mật khẩu";
+            this.rbBtnChangePassword.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.rbBtnChangePassword.Image = global::GymFitnessOlympic.Properties.Resources.changepassword;
+            this.rbBtnChangePassword.SmallImage = global::GymFitnessOlympic.Properties.Resources.changepassword;
+            this.rbBtnChangePassword.Text = "Đổi mật khẩu";
             // 
-            // ribbonOrbMenuItem9
+            // rbBtnRole
             // 
-            this.ribbonOrbMenuItem9.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem9.Image = global::GymFitnessOlympic.Properties.Resources.permission;
-            this.ribbonOrbMenuItem9.SmallImage = global::GymFitnessOlympic.Properties.Resources.permission;
-            this.ribbonOrbMenuItem9.Text = "Phân quyền";
+            this.rbBtnRole.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.rbBtnRole.Image = global::GymFitnessOlympic.Properties.Resources.permission;
+            this.rbBtnRole.SmallImage = global::GymFitnessOlympic.Properties.Resources.permission;
+            this.rbBtnRole.Text = "Phân quyền";
             // 
             // rbBtnAbout
             // 
@@ -160,28 +252,13 @@
             this.rbBtnLoginQuick.ToolTip = "Đăng nhập";
             this.rbBtnLoginQuick.Click += new System.EventHandler(this.rbBtnLogin_Click);
             // 
-            // ribbonButton2
+            // rbBtnLogoutQuick
             // 
-            this.ribbonButton2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.Image")));
-            this.ribbonButton2.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
-            this.ribbonButton2.SmallImage = global::GymFitnessOlympic.Properties.Resources.logoutsmall;
-            this.ribbonButton2.Text = "ribbonButton2";
-            this.ribbonButton2.ToolTip = "Đăng xuất";
-            // 
-            // ribbonTab1
-            // 
-            this.ribbonTab1.Panels.Add(this.ribbonPanel1);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel2);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel6);
-            this.ribbonTab1.Text = "Quản lý phòng GYM";
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.Items.Add(this.ribbonButton3);
-            this.ribbonPanel1.Items.Add(this.ribbonButton4);
-            this.ribbonPanel1.Items.Add(this.ribbonButton5);
-            this.ribbonPanel1.Items.Add(this.ribbonButton6);
-            this.ribbonPanel1.Text = "Danh mục";
+            this.rbBtnLogoutQuick.Image = ((System.Drawing.Image)(resources.GetObject("rbBtnLogoutQuick.Image")));
+            this.rbBtnLogoutQuick.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
+            this.rbBtnLogoutQuick.SmallImage = global::GymFitnessOlympic.Properties.Resources.logoutsmall;
+            this.rbBtnLogoutQuick.Text = "ribbonButton2";
+            this.rbBtnLogoutQuick.ToolTip = "Đăng xuất";
             // 
             // ribbonButton3
             // 
@@ -207,24 +284,11 @@
             this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
             this.ribbonButton6.Text = "Gói tập";
             // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.Items.Add(this.ribbonButton7);
-            this.ribbonPanel2.Text = "Sản phẩm bán";
-            // 
             // ribbonButton7
             // 
             this.ribbonButton7.Image = global::GymFitnessOlympic.Properties.Resources.product;
             this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
             this.ribbonButton7.Text = "Sản phẩm";
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.ribbonButton16);
-            this.ribbonPanel6.Items.Add(this.ribbonButton14);
-            this.ribbonPanel6.Items.Add(this.ribbonButton17);
-            this.ribbonPanel6.Items.Add(this.ribbonButton18);
-            this.ribbonPanel6.Text = "Thống kê";
             // 
             // ribbonButton16
             // 
@@ -250,19 +314,6 @@
             this.ribbonButton18.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton18.SmallImage")));
             this.ribbonButton18.Text = "Sản phẩm";
             // 
-            // ribbonTab2
-            // 
-            this.ribbonTab2.Panels.Add(this.ribbonPanel3);
-            this.ribbonTab2.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab2.Panels.Add(this.ribbonPanel4);
-            this.ribbonTab2.Text = "Tác nghiệp";
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.Items.Add(this.ribbonButton9);
-            this.ribbonPanel3.Items.Add(this.ribbonButton10);
-            this.ribbonPanel3.Text = "Nhân viên";
-            // 
             // ribbonButton9
             // 
             this.ribbonButton9.Image = global::GymFitnessOlympic.Properties.Resources.checkin;
@@ -275,12 +326,6 @@
             this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
             this.ribbonButton10.Text = "Check out";
             // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.ribbonButton19);
-            this.ribbonPanel5.Items.Add(this.ribbonButton8);
-            this.ribbonPanel5.Text = "Sản phẩm";
-            // 
             // ribbonButton19
             // 
             this.ribbonButton19.Image = global::GymFitnessOlympic.Properties.Resources.buy;
@@ -292,13 +337,6 @@
             this.ribbonButton8.Image = global::GymFitnessOlympic.Properties.Resources.checkproduct;
             this.ribbonButton8.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.SmallImage")));
             this.ribbonButton8.Text = "Kiểm kho";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.Items.Add(this.ribbonButton11);
-            this.ribbonPanel4.Items.Add(this.ribbonButton20);
-            this.ribbonPanel4.Items.Add(this.ribbonButton13);
-            this.ribbonPanel4.Text = "Hội viên";
             // 
             // ribbonButton11
             // 
@@ -318,17 +356,6 @@
             this.ribbonButton13.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.SmallImage")));
             this.ribbonButton13.Text = "Sinh nhật";
             // 
-            // ribbonTab3
-            // 
-            this.ribbonTab3.Panels.Add(this.ribbonPanel7);
-            this.ribbonTab3.Text = "Thống kê";
-            // 
-            // ribbonPanel7
-            // 
-            this.ribbonPanel7.Items.Add(this.ribbonButton12);
-            this.ribbonPanel7.Items.Add(this.ribbonButton15);
-            this.ribbonPanel7.Text = "Thống kê cá nhân";
-            // 
             // ribbonButton12
             // 
             this.ribbonButton12.Image = global::GymFitnessOlympic.Properties.Resources.statistics1;
@@ -340,14 +367,6 @@
             this.ribbonButton15.Image = global::GymFitnessOlympic.Properties.Resources.statistics4;
             this.ribbonButton15.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.SmallImage")));
             this.ribbonButton15.Text = "Sản phẩm";
-            // 
-            // pnMain
-            // 
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(0, 154);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(912, 218);
-            this.pnMain.TabIndex = 1;
             // 
             // ribbonOrbMenuItem1
             // 
@@ -390,21 +409,12 @@
             this.ribbonOrbOptionButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbOptionButton1.SmallImage")));
             this.ribbonOrbOptionButton1.Text = "Thoát";
             // 
-            // statusStrip1
+            // rbBtnUpdate
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblLoginStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(912, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblLoginStatus
-            // 
-            this.lblLoginStatus.Name = "lblLoginStatus";
-            this.lblLoginStatus.Size = new System.Drawing.Size(71, 17);
-            this.lblLoginStatus.Text = "Login status";
+            this.rbBtnUpdate.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.rbBtnUpdate.Image = global::GymFitnessOlympic.Properties.Resources.update;
+            this.rbBtnUpdate.SmallImage = global::GymFitnessOlympic.Properties.Resources.update;
+            this.rbBtnUpdate.Text = "Cập nhật";
             // 
             // FormMain
             // 
@@ -431,8 +441,8 @@
         private System.Windows.Forms.Ribbon rbMain;
         private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.RibbonButton rbBtnLoginQuick;
-        private System.Windows.Forms.RibbonButton ribbonButton2;
-        private System.Windows.Forms.RibbonTab ribbonTab1;
+        private System.Windows.Forms.RibbonButton rbBtnLogoutQuick;
+        private System.Windows.Forms.RibbonTab rbTabManager;
         private System.Windows.Forms.RibbonPanel ribbonPanel1;
         private System.Windows.Forms.RibbonButton ribbonButton3;
         private System.Windows.Forms.RibbonButton ribbonButton4;
@@ -440,8 +450,8 @@
         private System.Windows.Forms.RibbonButton ribbonButton6;
         private System.Windows.Forms.RibbonPanel ribbonPanel2;
         private System.Windows.Forms.RibbonButton ribbonButton7;
-        private System.Windows.Forms.RibbonTab ribbonTab2;
-        private System.Windows.Forms.RibbonTab ribbonTab3;
+        private System.Windows.Forms.RibbonTab rbTabOperator;
+        private System.Windows.Forms.RibbonTab rbTabStatistics;
         private System.Windows.Forms.RibbonPanel ribbonPanel3;
         private System.Windows.Forms.RibbonButton ribbonButton9;
         private System.Windows.Forms.RibbonButton ribbonButton10;
@@ -467,11 +477,12 @@
         private System.Windows.Forms.RibbonButton ribbonButton20;
         private System.Windows.Forms.RibbonButton ribbonButton8;
         private System.Windows.Forms.RibbonOrbMenuItem rbBtnLogin;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem7;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem8;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem9;
+        private System.Windows.Forms.RibbonOrbMenuItem rbBtnLogout;
+        private System.Windows.Forms.RibbonOrbMenuItem rbBtnChangePassword;
+        private System.Windows.Forms.RibbonOrbMenuItem rbBtnRole;
         private System.Windows.Forms.RibbonOrbMenuItem rbBtnAbout;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblLoginStatus;
+        private System.Windows.Forms.RibbonOrbMenuItem rbBtnUpdate;
     }
 }

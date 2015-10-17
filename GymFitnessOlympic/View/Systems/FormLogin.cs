@@ -7,17 +7,18 @@ using System.Text;
 using System.Windows.Forms;
 using GymFitnessOlympic.Controller;
 using GymFitnessOlympic.Models;
+using GymFitnessOlympic.View.Utils;
 
 namespace GymFitnessOlympic.View.Systems
 {
-    public partial class FormLogin : Form
+    public partial class FormLogin : BaseDialog
     {
         private const string HKEYAPP = "HKEY_CURRENT_USER\\Software\\GymFitness";
-        private AppUser m_NguoiSuDung = null;
-        public AppUser NguoiSuDung
+        private AppUser m_User = null;
+        public AppUser User
         {
-            get { return m_NguoiSuDung; }
-            private set { m_NguoiSuDung = value; }
+            get { return m_User; }
+            private set { m_User = value; }
         }
 
         public FormLogin()
@@ -66,14 +67,14 @@ namespace GymFitnessOlympic.View.Systems
                     }
                     else //if (this.NguoiSuDung != null)
                     {
-                        this.NguoiSuDung = oE.Result as AppUser;
+                        this.User = oE.Result as AppUser;
                         //Kiểm tra người sử dụng còn có quyến sử dụng hệ thống hay không
-                        if (this.NguoiSuDung.IsActive == false)
+                        if (this.User.IsActive == false)
                         {
                             Utils.DialogUtils.ShowMessage("Bạn đã bị thu quyền sử dụng trên hệ thống.\n\rVui lòng liên hệ với quản trị viên");
                             txtMatKhau.Clear();
                             txtTenDangNhap.Focus();
-                            this.NguoiSuDung = null;
+                            this.User = null;
                         }
                         else
                         {

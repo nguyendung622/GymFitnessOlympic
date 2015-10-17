@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using GymFitnessOlympic.Controller;
 using GymFitnessOlympic.Models;
 using GymFitnessOlympic.View.Systems;
 using GymFitnessOlympic.View.UserControls;
@@ -14,12 +15,12 @@ namespace GymFitnessOlympic.View
 {
     public partial class FormMain : Form
     {
-        public static AppUser NguoiSuDung { get; private set; }
+        public static AppUser User { get; private set; }
 
         public FormMain()
         {
             InitializeComponent();
-            LoadUcWelcome();
+            Logout();
         }
 
         #region Private method
@@ -31,9 +32,63 @@ namespace GymFitnessOlympic.View
         }
         public void Logout()
         {
-            FormMain.NguoiSuDung = null;
+            FormMain.User = null;
             lblLoginStatus.Text = "Chưa đăng nhập";
+            rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = false;
+
+            rbTabManager.Visible = rbTabOperator.Visible = rbTabStatistics.Visible = false;
             LoadUcWelcome();
+        }
+        public void Login(AppUser user)
+        {
+            #region Cập nhật giao diện
+            FormMain.User = user;
+
+            lblLoginStatus.Text = string.Format("Đã đăng nhập ({0} - {1})",
+                FormMain.User.UserName, FormMain.User.Role);
+            var isAdmin = user.Role == (int)VAITRO.Admin;
+            rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = true;
+            rbTabManager.Visible = isAdmin;
+            rbTabOperator.Visible = rbTabStatistics.Visible = true;
+            /*
+             * Phần quyền sử dụng hệ thống
+             * Khi nào triển khai thì uncomment
+             */
+            //var myItems = BizPhanQuyen.GetItems(this.msMain);
+            //var lsUser_Function = BizPhanQuyen.GetListByUser(nguoiSuDung.UserName);
+            //foreach (var item in myItems)
+            //{
+            //    if (lsUser_Function.Contains(item.Text))
+            //        item.Visible = true;
+            //    else
+            //        item.Visible = false;
+            //}
+
+
+            /*
+             * Dù có phần quyền như thế nào đi nữa thì những chức năng dưới vẫn phải theo quy tắc này
+             */
+            rbBtnLogin.Visible = false;
+            /*
+             * Chỉ để thuận tiện cho việc test. Khi triển khai nhớ uncoomment
+             */
+            //miHeThong_CauHinh.Visible = miHeThong_PhanQuyen.Visible = miHeThong_NhatKyHoatDong.Visible = miHeThong_QuanLyNguoiDung.Visible = isAdmin;
+
+            /*
+             * Khi triển khai thì comment những dòng sau
+             */
+            //miDuLieu.Visible = !isAdmin;
+            //miDaoTao.Visible = !isAdmin;
+            //miKhaoThi.Visible = !isAdmin;
+            //miXetTotNghiep.Visible = !isAdmin;
+            //lnkHocKy.Visible = !isAdmin;
+            #endregion
+
+            #region Nạp dữ liệu ban đầu
+            // 1. Nạp danh sách Năm học, học kỳ
+
+            // 2. SetHocKy
+            #endregion
         }
         #endregion
 
@@ -46,7 +101,18 @@ namespace GymFitnessOlympic.View
         private void rbBtnLogin_Click(object sender, EventArgs e)
         {
             var frm = new FormLogin();
-            frm.ShowDialog();
+            if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.Login(frm.User);
+            }
+        }
+
+        private void rbBtnLogout_Click(object sender, EventArgs e)
+        {
+            if (GymFitnessOlympic.View.Utils.DialogUtils.ShowOKCancel("Bạn có chắc chắn muốn đăng xuất không?") == System.Windows.Forms.DialogResult.OK)
+            {
+                Logout();
+            }
         }
     }
 }

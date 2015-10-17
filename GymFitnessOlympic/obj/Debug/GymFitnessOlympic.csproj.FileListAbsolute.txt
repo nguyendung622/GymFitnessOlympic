@@ -17,3 +17,5 @@ D:\Projects\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\EntityFramework.dll
 D:\Projects\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\EntityFramework.SqlServer.dll
 D:\Projects\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\EntityFramework.xml
 D:\Projects\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\GymFitnessOlympic\GymFitnessOlympic\obj\Debug\GymFitnessOlympic.View.Utils.BaseDialog.resources
+D:\Projects\GymFitnessOlympic\GymFitnessOlympic\obj\Debug\GymFitnessOlympic.View.Utils.BaseForm.resources
