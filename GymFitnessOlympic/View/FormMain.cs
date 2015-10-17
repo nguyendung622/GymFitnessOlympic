@@ -13,7 +13,7 @@ using GymFitnessOlympic.View.UserControls;
 
 namespace GymFitnessOlympic.View
 {
-    public partial class FormMain : Form
+    public partial class FormMain : RibbonForm
     {
         public static AppUser User { get; private set; }
 
@@ -35,8 +35,8 @@ namespace GymFitnessOlympic.View
             FormMain.User = null;
             lblLoginStatus.Text = "Chưa đăng nhập";
             rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = false;
-            rbBtnChangePassword.Enabled = true;
-                rbBtnRole.Enabled = false;
+            rbBtnChangePassword.Enabled = false;
+            rbBtnRole.Enabled = false;
             rbTabManager.Visible = rbTabOperator.Visible = rbTabStatistics.Visible = false;
             LoadUcWelcome();
         }
@@ -48,6 +48,7 @@ namespace GymFitnessOlympic.View
             lblLoginStatus.Text = string.Format("Đã đăng nhập ({0} - {1})",
                 FormMain.User.UserName, FormMain.User.Role);
             var isAdmin = user.Role == (int)VAITRO.Admin;
+            rbBtnLogin.Enabled = rbBtnLoginQuick.Enabled = false;
             rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = true;
             rbBtnChangePassword.Enabled = true;
             rbBtnRole.Enabled = rbTabManager.Visible = isAdmin;
