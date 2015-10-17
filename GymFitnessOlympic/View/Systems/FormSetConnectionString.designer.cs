@@ -99,7 +99,7 @@
             this.txtDBName.Name = "txtDBName";
             this.txtDBName.Size = new System.Drawing.Size(317, 22);
             this.txtDBName.TabIndex = 4;
-            this.txtDBName.Text = "CEMS4UG_DHKH";
+            this.txtDBName.Text = "GymFitness";
             // 
             // label4
             // 
@@ -212,7 +212,7 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "label6";
             // 
-            // FormThietLapChuoiKetNoi
+            // FormSetConnectionString
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,7 +225,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormThietLapChuoiKetNoi";
+            this.Name = "FormSetConnectionString";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thiết lập thông tin kết nối máy chủ";
             this.TopMost = true;

@@ -35,7 +35,8 @@ namespace GymFitnessOlympic.View
             FormMain.User = null;
             lblLoginStatus.Text = "Chưa đăng nhập";
             rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = false;
-            rbBtnChangePassword.Enabled = rbBtnRole.Enabled = false;
+            rbBtnChangePassword.Enabled = true;
+                rbBtnRole.Enabled = false;
             rbTabManager.Visible = rbTabOperator.Visible = rbTabStatistics.Visible = false;
             LoadUcWelcome();
         }
@@ -114,6 +115,22 @@ namespace GymFitnessOlympic.View
             {
                 Logout();
             }
+        }
+
+        private void ribbonOrbOptionButton2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void rbBtnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbBtnChangePassword_Click(object sender, EventArgs e)
+        {
+            var frm = new FormChangePassword(User);
+            frm.ShowDialog();
         }
     }
 }

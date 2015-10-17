@@ -61,6 +61,7 @@
     <Compile Include="Controller\AppUserController.cs" />
     <Compile Include="Controller\Constants.cs" />
     <Compile Include="Models\AppUser.cs" />
+    <Compile Include="Models\AppUser_Extension.cs" />
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\DBContext_Helper.cs" />
     <Compile Include="Models\KeyValueConfig.cs" />
@@ -80,6 +81,12 @@
     </Compile>
     <Compile Include="View\Systems\FormAbout.designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Systems\FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Systems\FormChangePassword.designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Systems\FormLogin.cs">
       <SubType>Form</SubType>
@@ -128,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Systems\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Systems\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Systems\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
