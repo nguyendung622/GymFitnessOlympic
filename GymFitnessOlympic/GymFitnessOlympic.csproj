@@ -103,6 +103,10 @@
     <Content Include="Resources\product.png" />
     <Content Include="Resources\staff.png" />
     <Content Include="Resources\staff2.png" />
+    <Content Include="Resources\statistics1.png" />
+    <Content Include="Resources\statistics2.png" />
+    <Content Include="Resources\statistics3.png" />
+    <Content Include="Resources\statistics4.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />

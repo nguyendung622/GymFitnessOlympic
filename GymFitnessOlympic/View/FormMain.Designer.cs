@@ -35,30 +35,30 @@
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
-            this.pnMain = new System.Windows.Forms.Panel();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton16 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton17 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton18 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
+            this.pnMain = new System.Windows.Forms.Panel();
             this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem2 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem3 = new System.Windows.Forms.RibbonOrbMenuItem();
@@ -136,42 +136,66 @@
             this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
             this.ribbonButton3.Text = "Phòng tập";
             // 
-            // pnMain
-            // 
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(0, 154);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(912, 240);
-            this.pnMain.TabIndex = 1;
-            // 
             // ribbonButton4
             // 
-            this.ribbonButton4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.Image")));
+            this.ribbonButton4.Image = global::GymFitnessOlympic.Properties.Resources.staff;
             this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
             this.ribbonButton4.Text = "Nhân viên";
             // 
             // ribbonButton5
             // 
-            this.ribbonButton5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.Image")));
+            this.ribbonButton5.Image = global::GymFitnessOlympic.Properties.Resources.member;
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "Hội viên";
             // 
             // ribbonButton6
             // 
-            this.ribbonButton6.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.Image")));
+            this.ribbonButton6.Image = global::GymFitnessOlympic.Properties.Resources.package;
             this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
             this.ribbonButton6.Text = "Gói tập";
             // 
             // ribbonPanel2
             // 
             this.ribbonPanel2.Items.Add(this.ribbonButton7);
-            this.ribbonPanel2.Text = "Quản lý bán hàng";
+            this.ribbonPanel2.Text = "Sản phẩm bán";
             // 
             // ribbonButton7
             // 
-            this.ribbonButton7.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.Image")));
+            this.ribbonButton7.Image = global::GymFitnessOlympic.Properties.Resources.product;
             this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
             this.ribbonButton7.Text = "Sản phẩm";
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.ribbonButton16);
+            this.ribbonPanel6.Items.Add(this.ribbonButton14);
+            this.ribbonPanel6.Items.Add(this.ribbonButton17);
+            this.ribbonPanel6.Items.Add(this.ribbonButton18);
+            this.ribbonPanel6.Text = "Thống kê";
+            // 
+            // ribbonButton16
+            // 
+            this.ribbonButton16.Image = global::GymFitnessOlympic.Properties.Resources.statistics1;
+            this.ribbonButton16.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.SmallImage")));
+            this.ribbonButton16.Text = "Phiếu thu";
+            // 
+            // ribbonButton14
+            // 
+            this.ribbonButton14.Image = global::GymFitnessOlympic.Properties.Resources.statistics2;
+            this.ribbonButton14.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.SmallImage")));
+            this.ribbonButton14.Text = "Hội viên";
+            // 
+            // ribbonButton17
+            // 
+            this.ribbonButton17.Image = global::GymFitnessOlympic.Properties.Resources.statistics3;
+            this.ribbonButton17.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.SmallImage")));
+            this.ribbonButton17.Text = "Nhân viên";
+            // 
+            // ribbonButton18
+            // 
+            this.ribbonButton18.Image = global::GymFitnessOlympic.Properties.Resources.statistics4;
+            this.ribbonButton18.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton18.SmallImage")));
+            this.ribbonButton18.Text = "Sản phẩm";
             // 
             // ribbonTab2
             // 
@@ -180,22 +204,11 @@
             this.ribbonTab2.Panels.Add(this.ribbonPanel5);
             this.ribbonTab2.Text = "Tác nghiệp";
             // 
-            // ribbonTab3
-            // 
-            this.ribbonTab3.Panels.Add(this.ribbonPanel7);
-            this.ribbonTab3.Text = "Thống kê";
-            // 
             // ribbonPanel3
             // 
             this.ribbonPanel3.Items.Add(this.ribbonButton9);
             this.ribbonPanel3.Items.Add(this.ribbonButton10);
             this.ribbonPanel3.Text = "Nhân viên";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.Items.Add(this.ribbonButton11);
-            this.ribbonPanel4.Items.Add(this.ribbonButton13);
-            this.ribbonPanel4.Text = "Hội viên";
             // 
             // ribbonButton9
             // 
@@ -209,6 +222,12 @@
             this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
             this.ribbonButton10.Text = "Check out";
             // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.Items.Add(this.ribbonButton11);
+            this.ribbonPanel4.Items.Add(this.ribbonButton13);
+            this.ribbonPanel4.Text = "Hội viên";
+            // 
             // ribbonButton11
             // 
             this.ribbonButton11.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton11.Image")));
@@ -221,56 +240,6 @@
             this.ribbonButton13.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.SmallImage")));
             this.ribbonButton13.Text = "Sinh nhật";
             // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.ribbonButton16);
-            this.ribbonPanel6.Items.Add(this.ribbonButton14);
-            this.ribbonPanel6.Items.Add(this.ribbonButton17);
-            this.ribbonPanel6.Items.Add(this.ribbonButton18);
-            this.ribbonPanel6.Text = "Thống kê";
-            // 
-            // ribbonPanel7
-            // 
-            this.ribbonPanel7.Items.Add(this.ribbonButton12);
-            this.ribbonPanel7.Items.Add(this.ribbonButton15);
-            this.ribbonPanel7.Text = "Thống kê cá nhân";
-            // 
-            // ribbonButton12
-            // 
-            this.ribbonButton12.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.Image")));
-            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
-            this.ribbonButton12.Text = "Phiếu thu";
-            // 
-            // ribbonButton15
-            // 
-            this.ribbonButton15.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.Image")));
-            this.ribbonButton15.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.SmallImage")));
-            this.ribbonButton15.Text = "Sản phẩm";
-            // 
-            // ribbonButton16
-            // 
-            this.ribbonButton16.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.Image")));
-            this.ribbonButton16.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.SmallImage")));
-            this.ribbonButton16.Text = "Phiếu thu";
-            // 
-            // ribbonButton14
-            // 
-            this.ribbonButton14.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.Image")));
-            this.ribbonButton14.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.SmallImage")));
-            this.ribbonButton14.Text = "Hội viên";
-            // 
-            // ribbonButton17
-            // 
-            this.ribbonButton17.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.Image")));
-            this.ribbonButton17.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.SmallImage")));
-            this.ribbonButton17.Text = "Nhân viên";
-            // 
-            // ribbonButton18
-            // 
-            this.ribbonButton18.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton18.Image")));
-            this.ribbonButton18.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton18.SmallImage")));
-            this.ribbonButton18.Text = "Sản phẩm";
-            // 
             // ribbonPanel5
             // 
             this.ribbonPanel5.Items.Add(this.ribbonButton19);
@@ -281,6 +250,37 @@
             this.ribbonButton19.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.Image")));
             this.ribbonButton19.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.SmallImage")));
             this.ribbonButton19.Text = "Kiểm kho";
+            // 
+            // ribbonTab3
+            // 
+            this.ribbonTab3.Panels.Add(this.ribbonPanel7);
+            this.ribbonTab3.Text = "Thống kê";
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.Items.Add(this.ribbonButton12);
+            this.ribbonPanel7.Items.Add(this.ribbonButton15);
+            this.ribbonPanel7.Text = "Thống kê cá nhân";
+            // 
+            // ribbonButton12
+            // 
+            this.ribbonButton12.Image = global::GymFitnessOlympic.Properties.Resources.statistics1;
+            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
+            this.ribbonButton12.Text = "Phiếu thu";
+            // 
+            // ribbonButton15
+            // 
+            this.ribbonButton15.Image = global::GymFitnessOlympic.Properties.Resources.statistics4;
+            this.ribbonButton15.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.SmallImage")));
+            this.ribbonButton15.Text = "Sản phẩm";
+            // 
+            // pnMain
+            // 
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(0, 154);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(912, 240);
+            this.pnMain.TabIndex = 1;
             // 
             // ribbonOrbMenuItem1
             // 
