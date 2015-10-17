@@ -59,6 +59,12 @@
             this.ribbonButton18 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
+            this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonOrbMenuItem2 = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonOrbMenuItem3 = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonOrbMenuItem4 = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonOrbMenuItem5 = new System.Windows.Forms.RibbonOrbMenuItem();
+            this.ribbonOrbOptionButton1 = new System.Windows.Forms.RibbonOrbOptionButton();
             this.SuspendLayout();
             // 
             // rbMain
@@ -276,6 +282,47 @@
             this.ribbonButton19.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.SmallImage")));
             this.ribbonButton19.Text = "Kiểm kho";
             // 
+            // ribbonOrbMenuItem1
+            // 
+            this.ribbonOrbMenuItem1.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonOrbMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.Image")));
+            this.ribbonOrbMenuItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.SmallImage")));
+            this.ribbonOrbMenuItem1.Text = "Đăng nhập";
+            // 
+            // ribbonOrbMenuItem2
+            // 
+            this.ribbonOrbMenuItem2.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonOrbMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.Image")));
+            this.ribbonOrbMenuItem2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.SmallImage")));
+            this.ribbonOrbMenuItem2.Text = "Đăng xuất";
+            // 
+            // ribbonOrbMenuItem3
+            // 
+            this.ribbonOrbMenuItem3.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonOrbMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.Image")));
+            this.ribbonOrbMenuItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.SmallImage")));
+            this.ribbonOrbMenuItem3.Text = "Đổi mật khẩu";
+            // 
+            // ribbonOrbMenuItem4
+            // 
+            this.ribbonOrbMenuItem4.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonOrbMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.Image")));
+            this.ribbonOrbMenuItem4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.SmallImage")));
+            this.ribbonOrbMenuItem4.Text = "Phân quyền";
+            // 
+            // ribbonOrbMenuItem5
+            // 
+            this.ribbonOrbMenuItem5.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonOrbMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem5.Image")));
+            this.ribbonOrbMenuItem5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem5.SmallImage")));
+            this.ribbonOrbMenuItem5.Text = "Thông tin trợ giúp";
+            // 
+            // ribbonOrbOptionButton1
+            // 
+            this.ribbonOrbOptionButton1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbOptionButton1.Image")));
+            this.ribbonOrbOptionButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbOptionButton1.SmallImage")));
+            this.ribbonOrbOptionButton1.Text = "Thoát";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,5 +370,11 @@
         private System.Windows.Forms.RibbonButton ribbonButton18;
         private System.Windows.Forms.RibbonPanel ribbonPanel5;
         private System.Windows.Forms.RibbonButton ribbonButton19;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem1;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem2;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem3;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem4;
+        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem5;
+        private System.Windows.Forms.RibbonOrbOptionButton ribbonOrbOptionButton1;
     }
 }
