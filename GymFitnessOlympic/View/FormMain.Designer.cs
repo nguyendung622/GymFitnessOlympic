@@ -41,7 +41,6 @@
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
             this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
             this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
@@ -49,8 +48,17 @@
             this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton16 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton17 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton18 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // rbMain
@@ -76,7 +84,7 @@
             this.rbMain.QuickAcessToolbar.Items.Add(this.ribbonButton1);
             this.rbMain.QuickAcessToolbar.Items.Add(this.ribbonButton2);
             this.rbMain.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.rbMain.Size = new System.Drawing.Size(912, 145);
+            this.rbMain.Size = new System.Drawing.Size(912, 154);
             this.rbMain.TabIndex = 0;
             this.rbMain.Tabs.Add(this.ribbonTab1);
             this.rbMain.Tabs.Add(this.ribbonTab2);
@@ -103,6 +111,7 @@
             // 
             this.ribbonTab1.Panels.Add(this.ribbonPanel1);
             this.ribbonTab1.Panels.Add(this.ribbonPanel2);
+            this.ribbonTab1.Panels.Add(this.ribbonPanel6);
             this.ribbonTab1.Text = "Quản lý phòng GYM";
             // 
             // ribbonPanel1
@@ -122,9 +131,9 @@
             // pnMain
             // 
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(0, 145);
+            this.pnMain.Location = new System.Drawing.Point(0, 154);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(912, 249);
+            this.pnMain.Size = new System.Drawing.Size(912, 240);
             this.pnMain.TabIndex = 1;
             // 
             // ribbonButton4
@@ -148,7 +157,6 @@
             // ribbonPanel2
             // 
             this.ribbonPanel2.Items.Add(this.ribbonButton7);
-            this.ribbonPanel2.Items.Add(this.ribbonButton8);
             this.ribbonPanel2.Text = "Quản lý bán hàng";
             // 
             // ribbonButton7
@@ -157,20 +165,16 @@
             this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
             this.ribbonButton7.Text = "Sản phẩm";
             // 
-            // ribbonButton8
-            // 
-            this.ribbonButton8.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.Image")));
-            this.ribbonButton8.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.SmallImage")));
-            this.ribbonButton8.Text = "Kiểm kho";
-            // 
             // ribbonTab2
             // 
             this.ribbonTab2.Panels.Add(this.ribbonPanel3);
             this.ribbonTab2.Panels.Add(this.ribbonPanel4);
+            this.ribbonTab2.Panels.Add(this.ribbonPanel5);
             this.ribbonTab2.Text = "Tác nghiệp";
             // 
             // ribbonTab3
             // 
+            this.ribbonTab3.Panels.Add(this.ribbonPanel7);
             this.ribbonTab3.Text = "Thống kê";
             // 
             // ribbonPanel3
@@ -182,7 +186,6 @@
             // ribbonPanel4
             // 
             this.ribbonPanel4.Items.Add(this.ribbonButton11);
-            this.ribbonPanel4.Items.Add(this.ribbonButton12);
             this.ribbonPanel4.Items.Add(this.ribbonButton13);
             this.ribbonPanel4.Text = "Hội viên";
             // 
@@ -202,19 +205,74 @@
             // 
             this.ribbonButton11.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton11.Image")));
             this.ribbonButton11.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton11.SmallImage")));
-            this.ribbonButton11.Text = "Check in";
-            // 
-            // ribbonButton12
-            // 
-            this.ribbonButton12.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.Image")));
-            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
-            this.ribbonButton12.Text = "Check out";
+            this.ribbonButton11.Text = "Check in/out";
             // 
             // ribbonButton13
             // 
             this.ribbonButton13.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.Image")));
             this.ribbonButton13.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.SmallImage")));
             this.ribbonButton13.Text = "Sinh nhật";
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.ribbonButton16);
+            this.ribbonPanel6.Items.Add(this.ribbonButton14);
+            this.ribbonPanel6.Items.Add(this.ribbonButton17);
+            this.ribbonPanel6.Items.Add(this.ribbonButton18);
+            this.ribbonPanel6.Text = "Thống kê";
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.Items.Add(this.ribbonButton12);
+            this.ribbonPanel7.Items.Add(this.ribbonButton15);
+            this.ribbonPanel7.Text = "Thống kê cá nhân";
+            // 
+            // ribbonButton12
+            // 
+            this.ribbonButton12.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.Image")));
+            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
+            this.ribbonButton12.Text = "Phiếu thu";
+            // 
+            // ribbonButton15
+            // 
+            this.ribbonButton15.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.Image")));
+            this.ribbonButton15.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.SmallImage")));
+            this.ribbonButton15.Text = "Sản phẩm";
+            // 
+            // ribbonButton16
+            // 
+            this.ribbonButton16.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.Image")));
+            this.ribbonButton16.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.SmallImage")));
+            this.ribbonButton16.Text = "Phiếu thu";
+            // 
+            // ribbonButton14
+            // 
+            this.ribbonButton14.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.Image")));
+            this.ribbonButton14.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.SmallImage")));
+            this.ribbonButton14.Text = "Hội viên";
+            // 
+            // ribbonButton17
+            // 
+            this.ribbonButton17.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.Image")));
+            this.ribbonButton17.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.SmallImage")));
+            this.ribbonButton17.Text = "Nhân viên";
+            // 
+            // ribbonButton18
+            // 
+            this.ribbonButton18.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton18.Image")));
+            this.ribbonButton18.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton18.SmallImage")));
+            this.ribbonButton18.Text = "Sản phẩm";
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.Items.Add(this.ribbonButton19);
+            this.ribbonPanel5.Text = "Sản phẩm";
+            // 
+            // ribbonButton19
+            // 
+            this.ribbonButton19.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.Image")));
+            this.ribbonButton19.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.SmallImage")));
+            this.ribbonButton19.Text = "Kiểm kho";
             // 
             // FormMain
             // 
@@ -245,7 +303,6 @@
         private System.Windows.Forms.RibbonButton ribbonButton6;
         private System.Windows.Forms.RibbonPanel ribbonPanel2;
         private System.Windows.Forms.RibbonButton ribbonButton7;
-        private System.Windows.Forms.RibbonButton ribbonButton8;
         private System.Windows.Forms.RibbonTab ribbonTab2;
         private System.Windows.Forms.RibbonTab ribbonTab3;
         private System.Windows.Forms.RibbonPanel ribbonPanel3;
@@ -253,7 +310,16 @@
         private System.Windows.Forms.RibbonButton ribbonButton10;
         private System.Windows.Forms.RibbonPanel ribbonPanel4;
         private System.Windows.Forms.RibbonButton ribbonButton11;
-        private System.Windows.Forms.RibbonButton ribbonButton12;
         private System.Windows.Forms.RibbonButton ribbonButton13;
+        private System.Windows.Forms.RibbonPanel ribbonPanel6;
+        private System.Windows.Forms.RibbonPanel ribbonPanel7;
+        private System.Windows.Forms.RibbonButton ribbonButton12;
+        private System.Windows.Forms.RibbonButton ribbonButton15;
+        private System.Windows.Forms.RibbonButton ribbonButton16;
+        private System.Windows.Forms.RibbonButton ribbonButton14;
+        private System.Windows.Forms.RibbonButton ribbonButton17;
+        private System.Windows.Forms.RibbonButton ribbonButton18;
+        private System.Windows.Forms.RibbonPanel ribbonPanel5;
+        private System.Windows.Forms.RibbonButton ribbonButton19;
     }
 }
