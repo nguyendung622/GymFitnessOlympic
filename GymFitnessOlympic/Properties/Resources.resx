@@ -133,20 +133,35 @@
   <data name="logoutsmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoutsmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="statistics2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="changepassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\changepassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="member" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="statistics4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoutlarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoutlarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="permission" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\permission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="member" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="birthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birthday.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statistics3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statistics1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="product" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\product.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,22 +175,19 @@
   <data name="package" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\package.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginlarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginlarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="loginsmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginsmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="statistics1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\statistics1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loginlarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginlarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="statistics2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\statistics2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="statistics3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\statistics3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="permission" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\permission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="statistics4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\statistics4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

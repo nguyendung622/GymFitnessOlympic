@@ -87,7 +87,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\about.png" />
+    <Content Include="Resources\birthday.png" />
+    <Content Include="Resources\buy.png" />
     <Content Include="Resources\changepassword.png" />
+    <Content Include="Resources\checkin.png" />
+    <Content Include="Resources\checkout.png" />
     <Content Include="Resources\checkproduct.png" />
     <Content Include="Resources\exit.png" />
     <Content Include="Resources\exitsmall.png" />
