@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+
+namespace GymFitnessOlympic.Models
+{
+    public class HoaDon
+    {
+
+        public int MaHoaDon { get; set; }
+        public DateTime NgayLap { get; set; }
+        public NhanVien NhanVien { get; set; }
+        public List<ChiTietHoaDon> DanhSachChiTiet { get; set; }
+    }
+}

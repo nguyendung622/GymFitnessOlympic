@@ -59,18 +59,74 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AppUserController.cs" />
+    <Compile Include="Controller\ConfigController.cs" />
     <Compile Include="Controller\Constants.cs" />
-    <Compile Include="Models\AppUser.cs" />
-    <Compile Include="Models\AppUser_Extension.cs" />
+    <Compile Include="Controller\HoiVienController.cs" />
+    <Compile Include="Controller\NhanVienController.cs" />
+    <Compile Include="Migrations\201510250147552_mg1.cs" />
+    <Compile Include="Migrations\201510250147552_mg1.Designer.cs">
+      <DependentUpon>201510250147552_mg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250154294_mg2.cs" />
+    <Compile Include="Migrations\201510250154294_mg2.Designer.cs">
+      <DependentUpon>201510250154294_mg2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250155526_mg3.cs" />
+    <Compile Include="Migrations\201510250155526_mg3.Designer.cs">
+      <DependentUpon>201510250155526_mg3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250158264_mg4.cs" />
+    <Compile Include="Migrations\201510250158264_mg4.Designer.cs">
+      <DependentUpon>201510250158264_mg4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250210406_mg5.cs" />
+    <Compile Include="Migrations\201510250210406_mg5.Designer.cs">
+      <DependentUpon>201510250210406_mg5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AppUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\AppUser_Extension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ChiTietHoaDon.cs" />
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\DBContext_Helper.cs" />
+    <Compile Include="Models\GiamGia.cs" />
+    <Compile Include="Models\GoiTap.cs" />
+    <Compile Include="Models\HistotyHoiVien.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\HoiVien.cs" />
     <Compile Include="Models\KeyValueConfig.cs" />
-    <Compile Include="Models\Mapping\AppUserMap.cs" />
+    <Compile Include="Models\Mapping\HistoryHoiVienMap.cs" />
+    <Compile Include="Models\Mapping\HistoryNhanVienMap.cs" />
+    <Compile Include="Models\Mapping\AppUserMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Mapping\ChiTietHoaDonMap.cs" />
+    <Compile Include="Models\Mapping\GiamGiaMap.cs" />
+    <Compile Include="Models\Mapping\GoiTapMap.cs" />
+    <Compile Include="Models\HistoryNhanVien.cs" />
+    <Compile Include="Models\Mapping\HoaDonMap.cs" />
+    <Compile Include="Models\Mapping\SanPhamMap.cs" />
+    <Compile Include="Models\Mapping\QuyenMap.cs" />
+    <Compile Include="Models\Mapping\PhongTapMap.cs" />
+    <Compile Include="Models\Mapping\PhieuThuMap.cs" />
+    <Compile Include="Models\Mapping\NhanVienMap.cs" />
+    <Compile Include="Models\Mapping\HoiVienMap.cs" />
     <Compile Include="Models\Mapping\KeyValueConfigMap.cs" />
+    <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\PhieuThu.cs" />
+    <Compile Include="Models\PhongTap.cs" />
+    <Compile Include="Models\Quyen.cs" />
+    <Compile Include="Models\SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ConnectionUtils.cs" />
-    <Compile Include="View\FormMain.cs" />
+    <Compile Include="View\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
@@ -118,6 +174,21 @@
     </Compile>
     <Compile Include="View\Utils\DialogUtils.cs" />
     <Compile Include="View\Utils\WinFormsUtils.cs" />
+    <EmbeddedResource Include="Migrations\201510250147552_mg1.resx">
+      <DependentUpon>201510250147552_mg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250154294_mg2.resx">
+      <DependentUpon>201510250154294_mg2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250155526_mg3.resx">
+      <DependentUpon>201510250155526_mg3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250158264_mg4.resx">
+      <DependentUpon>201510250158264_mg4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250210406_mg5.resx">
+      <DependentUpon>201510250210406_mg5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -195,6 +266,7 @@
     <Content Include="Resources\statistics3.png" />
     <Content Include="Resources\statistics4.png" />
     <Content Include="Resources\update.png" />
+    <Content Include="res\demo DB.sql" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
