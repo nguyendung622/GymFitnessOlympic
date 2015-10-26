@@ -3,3 +3,8 @@ C:\Users\ndung_000\Downloads\SourceCode\System.Windows.Forms.Ribbon\bin\Debug\Sy
 C:\Users\ndung_000\Downloads\SourceCode\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.csprojResolveAssemblyReference.cache
 C:\Users\ndung_000\Downloads\SourceCode\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.dll
 C:\Users\ndung_000\Downloads\SourceCode\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.pdb
+D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\bin\Debug\System.Windows.Forms.Ribbon35.dll
+D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\bin\Debug\System.Windows.Forms.Ribbon35.pdb
+D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.dll
+D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.pdb
+D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.csprojResolveAssemblyReference.cache

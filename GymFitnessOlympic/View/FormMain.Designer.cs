@@ -41,10 +41,10 @@
             this.rbBtnLogoutQuick = new System.Windows.Forms.RibbonButton();
             this.rbTabManager = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
+            this.rbBtnQLPhongTap = new System.Windows.Forms.RibbonButton();
+            this.rbBtnQLNhanVien = new System.Windows.Forms.RibbonButton();
+            this.rbBtnQLHoiVien = new System.Windows.Forms.RibbonButton();
+            this.rbBtnQLGoiTap = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
@@ -65,7 +65,7 @@
             this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
             this.rbTabStatistics = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel7 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
+            this.rbBtnTKPhieuThu = new System.Windows.Forms.RibbonButton();
             this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
             this.rbTabHelp = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel8 = new System.Windows.Forms.RibbonPanel();
@@ -205,35 +205,38 @@
             // 
             // ribbonPanel1
             // 
-            this.ribbonPanel1.Items.Add(this.ribbonButton3);
-            this.ribbonPanel1.Items.Add(this.ribbonButton4);
-            this.ribbonPanel1.Items.Add(this.ribbonButton5);
-            this.ribbonPanel1.Items.Add(this.ribbonButton6);
+            this.ribbonPanel1.Items.Add(this.rbBtnQLPhongTap);
+            this.ribbonPanel1.Items.Add(this.rbBtnQLNhanVien);
+            this.ribbonPanel1.Items.Add(this.rbBtnQLHoiVien);
+            this.ribbonPanel1.Items.Add(this.rbBtnQLGoiTap);
             this.ribbonPanel1.Text = "Danh mục";
             // 
-            // ribbonButton3
+            // rbBtnQLPhongTap
             // 
-            this.ribbonButton3.Image = global::GymFitnessOlympic.Properties.Resources.location;
-            this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
-            this.ribbonButton3.Text = "Phòng tập";
+            this.rbBtnQLPhongTap.Image = global::GymFitnessOlympic.Properties.Resources.location;
+            this.rbBtnQLPhongTap.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbBtnQLPhongTap.SmallImage")));
+            this.rbBtnQLPhongTap.Text = "Phòng tập";
+            this.rbBtnQLPhongTap.Click += new System.EventHandler(this.rbBtnQLPhongTap_Click);
             // 
-            // ribbonButton4
+            // rbBtnQLNhanVien
             // 
-            this.ribbonButton4.Image = global::GymFitnessOlympic.Properties.Resources.staff;
-            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
-            this.ribbonButton4.Text = "Nhân viên";
+            this.rbBtnQLNhanVien.Image = global::GymFitnessOlympic.Properties.Resources.staff;
+            this.rbBtnQLNhanVien.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbBtnQLNhanVien.SmallImage")));
+            this.rbBtnQLNhanVien.Text = "Nhân viên";
+            this.rbBtnQLNhanVien.Click += new System.EventHandler(this.rbBtnQLNhanVien_Click);
             // 
-            // ribbonButton5
+            // rbBtnQLHoiVien
             // 
-            this.ribbonButton5.Image = global::GymFitnessOlympic.Properties.Resources.member;
-            this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
-            this.ribbonButton5.Text = "Hội viên";
+            this.rbBtnQLHoiVien.Image = global::GymFitnessOlympic.Properties.Resources.member;
+            this.rbBtnQLHoiVien.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbBtnQLHoiVien.SmallImage")));
+            this.rbBtnQLHoiVien.Text = "Hội viên";
+            this.rbBtnQLHoiVien.Click += new System.EventHandler(this.rbBtnQLHoiVien_Click);
             // 
-            // ribbonButton6
+            // rbBtnQLGoiTap
             // 
-            this.ribbonButton6.Image = global::GymFitnessOlympic.Properties.Resources.package;
-            this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
-            this.ribbonButton6.Text = "Gói tập";
+            this.rbBtnQLGoiTap.Image = global::GymFitnessOlympic.Properties.Resources.package;
+            this.rbBtnQLGoiTap.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbBtnQLGoiTap.SmallImage")));
+            this.rbBtnQLGoiTap.Text = "Gói tập";
             // 
             // ribbonPanel2
             // 
@@ -353,15 +356,15 @@
             // 
             // ribbonPanel7
             // 
-            this.ribbonPanel7.Items.Add(this.ribbonButton12);
+            this.ribbonPanel7.Items.Add(this.rbBtnTKPhieuThu);
             this.ribbonPanel7.Items.Add(this.ribbonButton15);
             this.ribbonPanel7.Text = "Thống kê cá nhân";
             // 
-            // ribbonButton12
+            // rbBtnTKPhieuThu
             // 
-            this.ribbonButton12.Image = global::GymFitnessOlympic.Properties.Resources.statistics1;
-            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
-            this.ribbonButton12.Text = "Phiếu thu";
+            this.rbBtnTKPhieuThu.Image = global::GymFitnessOlympic.Properties.Resources.statistics1;
+            this.rbBtnTKPhieuThu.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbBtnTKPhieuThu.SmallImage")));
+            this.rbBtnTKPhieuThu.Text = "Phiếu thu";
             // 
             // ribbonButton15
             // 
@@ -475,6 +478,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.rbMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HỆ THỐNG QUẢN LÝ PHÒNG GYM & FITNESS OLYMPIC HUẾ";
@@ -494,10 +498,10 @@
         private System.Windows.Forms.RibbonButton rbBtnLogoutQuick;
         private System.Windows.Forms.RibbonTab rbTabManager;
         private System.Windows.Forms.RibbonPanel ribbonPanel1;
-        private System.Windows.Forms.RibbonButton ribbonButton3;
-        private System.Windows.Forms.RibbonButton ribbonButton4;
-        private System.Windows.Forms.RibbonButton ribbonButton5;
-        private System.Windows.Forms.RibbonButton ribbonButton6;
+        private System.Windows.Forms.RibbonButton rbBtnQLPhongTap;
+        private System.Windows.Forms.RibbonButton rbBtnQLNhanVien;
+        private System.Windows.Forms.RibbonButton rbBtnQLHoiVien;
+        private System.Windows.Forms.RibbonButton rbBtnQLGoiTap;
         private System.Windows.Forms.RibbonPanel ribbonPanel2;
         private System.Windows.Forms.RibbonButton ribbonButton7;
         private System.Windows.Forms.RibbonTab rbTabOperator;
@@ -510,7 +514,7 @@
         private System.Windows.Forms.RibbonButton ribbonButton13;
         private System.Windows.Forms.RibbonPanel ribbonPanel6;
         private System.Windows.Forms.RibbonPanel ribbonPanel7;
-        private System.Windows.Forms.RibbonButton ribbonButton12;
+        private System.Windows.Forms.RibbonButton rbBtnTKPhieuThu;
         private System.Windows.Forms.RibbonButton ribbonButton15;
         private System.Windows.Forms.RibbonButton ribbonButton16;
         private System.Windows.Forms.RibbonButton ribbonButton14;

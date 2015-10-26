@@ -10,6 +10,8 @@ using GymFitnessOlympic.Controller;
 using GymFitnessOlympic.Models;
 using GymFitnessOlympic.View.Systems;
 using GymFitnessOlympic.View.UserControls;
+using DevExpress.XtraTab;
+using DevExpress.XtraTab.ViewInfo;
 
 namespace GymFitnessOlympic.View
 {
@@ -29,6 +31,12 @@ namespace GymFitnessOlympic.View
             var ucWelcome = new Welcome();
             ucWelcome.Dock = DockStyle.Fill;
             pnMain.Controls.Add(ucWelcome);
+        }
+        public void LoadUC(UserControl ucContent)
+        {
+            pnMain.Controls.Clear();
+            ucContent.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(ucContent);
         }
         public void Logout()
         {
@@ -125,13 +133,31 @@ namespace GymFitnessOlympic.View
 
         private void rbBtnUpdate_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void rbBtnChangePassword_Click(object sender, EventArgs e)
         {
             var frm = new FormChangePassword(User);
             frm.ShowDialog();
+        }
+
+        private void rbBtnQLPhongTap_Click(object sender, EventArgs e)
+        {
+            var UC = new QLPhongTap();
+            LoadUC(UC);
+        }
+
+        private void rbBtnQLNhanVien_Click(object sender, EventArgs e)
+        {
+            var UC = new QLNhanVien();
+            LoadUC(UC);
+        }
+
+        private void rbBtnQLHoiVien_Click(object sender, EventArgs e)
+        {
+            var UC = new QLHoiVien();
+            LoadUC(UC);
         }
     }
 }
