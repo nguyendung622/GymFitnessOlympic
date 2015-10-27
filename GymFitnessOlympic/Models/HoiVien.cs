@@ -6,15 +6,22 @@ using System.Text;
 
 namespace GymFitnessOlympic.Models
 {
-    public class HoiVien
+    public partial class HoiVien
     {
       
-        public int MaHoiVien { get; set; }
+        public string MaHoiVien { get; set; }
         public string TenHoiVien { get; set; }
-        public DateTime NgayDangKy { get; set; }
+        public string MaVachSauna { get; set; }
+        public DateTime NgaySinh { get; set; }
         public DateTime NgayHetHan { get; set; }
         public PhongTap PhongTap { get; set; }
-        //public int MaPhongTap { get; set; }
+        public int MaPhongTap { get; set; }
+        public string Anh { get; set; }
+
+        public HoiVien()
+        {
+            MaHoiVien = Guid.NewGuid().ToString();
+        }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GymFitnessOlympic.Models
 {
-    public class HoaDon
+    public partial class HoaDon
     {
 
         public int MaHoaDon { get; set; }
