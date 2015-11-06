@@ -14,5 +14,6 @@ namespace GymFitnessOlympic.Models
         public int SoTien { get; set; }
         public NhanVien NhanVien { get; set; }
         public HoiVien HoiVien { get; set; }
+        public GoiTap GoiTap { get; set; }
     }
 }

@@ -9,6 +9,7 @@ namespace GymFitnessOlympic.Models
     {
         public DateTime ThoiGian { get; set; }
         public bool IsCheckin { get; set; }
+        public bool IsSauna {get;set;}
         public HoiVien HoiVien { get; set; }
     }
 }

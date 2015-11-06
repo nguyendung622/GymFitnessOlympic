@@ -8,12 +8,13 @@ using System.Data.Entity;
 
 namespace GymFitnessOlympic.Controller
 {
-    class NhanVienController
+    class SanPhamController
     {
-        internal static List<NhanVien> GetByPhong(int phongID = -1){
+        internal static List<SanPham> GetList(int phongID = -1)
+        {
             using (var context = DBContext.GetContext())
             {
-                var nvs = context.NhanVien.Include(n => n.PhongTap);
+                var nvs = context.SanPham.Include(n => n.PhongTap);
                 if (phongID != -1)
                 {
                     nvs = nvs.Where(n => n.PhongTap.MaPhongTap == phongID);
@@ -22,26 +23,26 @@ namespace GymFitnessOlympic.Controller
             }
         }
 
-        internal static NhanVien GetByID(int maSP)
+        internal static SanPham GetByID(int maSP)
         {
             using (var context = DBContext.GetContext())
             {
-                var nv = context.NhanVien.FirstOrDefault(n => n.MaNhanVien == maSP);
+                var nv = context.SanPham.FirstOrDefault(n => n.MaSanPham == maSP );
                 return nv;
             }
         }
 
 
-        internal static CODE_RESULT_RETURN Add(NhanVien nv)
+        internal static CODE_RESULT_RETURN Add(SanPham sp)
         {
             using (var context = DBContext.GetContext())
             {
                 try
                 {
-                    var n1 = context.NhanVien.FirstOrDefault(n => n.MaNhanVien == nv.MaNhanVien);
+                    var n1 = context.SanPham.FirstOrDefault(n => n.MaSanPham == sp.MaSanPham);
                     if (n1 == null)
                     {
-                        context.NhanVien.Add(nv);
+                        context.SanPham.Add(sp);
                         context.SaveChanges();
                         return CODE_RESULT_RETURN.ThanhCong;
                     }
@@ -54,20 +55,16 @@ namespace GymFitnessOlympic.Controller
             }
         }
 
-        internal static CODE_RESULT_RETURN Update(NhanVien hv)
+        internal static CODE_RESULT_RETURN Update(PhongTap hv)
         {
             using (var db = DBContext.GetContext())
             {
-                var hvc = db.NhanVien.FirstOrDefault(h => h.MaNhanVien == hv.MaNhanVien);
+                var hvc = db.PhongTap.FirstOrDefault(h => h.MaPhongTap  == hv.MaPhongTap);
                 if (hvc != null)
                 {
-                    hvc.TenNhanVien = hv.TenNhanVien;
-                    hvc.UserName = hv.UserName;
-                    if (hv.PhongTap != null)
-                    {
-                        var phongMoi = db.PhongTap.FirstOrDefault(p => p.MaPhongTap == hv.PhongTap.MaPhongTap);
-                        hvc.PhongTap = phongMoi;
-                    }
+                    hvc.DiaChi = hv.DiaChi;
+                    hvc.TenPhongTap = hv.TenPhongTap;
+                  
                     db.SaveChanges();
                     return CODE_RESULT_RETURN.ThanhCong;
                 }
@@ -79,10 +76,10 @@ namespace GymFitnessOlympic.Controller
         {
             using (var context = DBContext.GetContext())
             {
-                var pt = context.NhanVien.FirstOrDefault(p => p.MaNhanVien == id);
+                var pt = context.PhongTap.FirstOrDefault(p => p.MaPhongTap == id);
                 if (pt != null)
                 {
-                    context.NhanVien.Remove(pt);
+                    context.PhongTap.Remove(pt);
                     context.SaveChanges();
                     return CODE_RESULT_RETURN.ThanhCong;
                 }
