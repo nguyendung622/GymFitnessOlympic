@@ -8,3 +8,8 @@ D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows
 D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.dll
 D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.pdb
 D:\DATA\Desktop\GymFitnessOlympic-master\GymFitnessOlympic-master\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.csprojResolveAssemblyReference.cache
+D:\DATA\Dropbox\OneDrive-2015-11-05\GymFitnessOlympic\GymFitnessOlympic\System.Windows.Forms.Ribbon\bin\Debug\System.Windows.Forms.Ribbon35.dll
+D:\DATA\Dropbox\OneDrive-2015-11-05\GymFitnessOlympic\GymFitnessOlympic\System.Windows.Forms.Ribbon\bin\Debug\System.Windows.Forms.Ribbon35.pdb
+D:\DATA\Dropbox\OneDrive-2015-11-05\GymFitnessOlympic\GymFitnessOlympic\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.csprojResolveAssemblyReference.cache
+D:\DATA\Dropbox\OneDrive-2015-11-05\GymFitnessOlympic\GymFitnessOlympic\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.dll
+D:\DATA\Dropbox\OneDrive-2015-11-05\GymFitnessOlympic\GymFitnessOlympic\System.Windows.Forms.Ribbon\obj\Debug\System.Windows.Forms.Ribbon35.pdb

@@ -159,5 +159,10 @@ namespace GymFitnessOlympic.View
             var UC = new QLHoiVien();
             LoadUC(UC);
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
