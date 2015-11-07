@@ -16,16 +16,23 @@ using GymFitnessOlympic.View.Systems;
 using GymFitnessOlympic.View.UserControls;
 using GymFitnessOlympic.Models;
 using GymFitnessOlympic.Controller;
+using GymFitnessOlympic.View.MainForms;
+using GymFitnessOlympic.View.ActForm;
+using GymFitnessOlympic.View.Dialog;
+using GymFitnessOlympic.View.ActForm.ThongKe;
+using TanHongPhat;
+using GymFitnessOlympic.Models.Util;
+using GymFitnessOlympic.View.UserControls.QuanLy;
 
 namespace GymFitnessOlympic.View
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public static AppUser User { get; private set; }
+        public static NhanVien User { get; private set; }
         public MainForm()
         {
             InitializeComponent();
-            //ribbonControl.SelectedPage = rbTabManager;
+            Logout();
         }
         #region Private method
         public void LoadUcWelcome()
@@ -45,19 +52,21 @@ namespace GymFitnessOlympic.View
             MainForm.User = null;
             lblLoginStatus.Text = "Chưa đăng nhập";
             rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = false;
+            rbBtnLogin.Enabled = true;
             rbBtnChangePassword.Enabled = false;
             rbBtnRole.Enabled = false;
             rbTabManager.Visible = rbTabOperator.Visible = rbTabStatistics.Visible = false;
+            pnMain.Controls.Clear();
             LoadUcWelcome();
         }
-        public void Login(AppUser user)
+        public void Login(NhanVien user)
         {
             #region Cập nhật giao diện
             MainForm.User = user;
 
             lblLoginStatus.Text = string.Format("Đã đăng nhập ({0} - {1})",
-                MainForm.User.UserName, MainForm.User.Role);
-            var isAdmin = user.Role == (int)VAITRO.Admin;
+                MainForm.User.UserName, MainForm.User.Quyen);
+            var isAdmin = user.Quyen.MaQuyen == 1;
             rbBtnLogin.Enabled = rbBtnLoginQuick.Enabled = false;
             rbBtnLogout.Enabled = rbBtnLogoutQuick.Enabled = true;
             rbBtnChangePassword.Enabled = true;
@@ -104,22 +113,25 @@ namespace GymFitnessOlympic.View
         }
         #endregion
 
-        private void rbBtnAbout_Click(object sender, EventArgs e)
-        {
-            var frm = new FormAbout();
-            frm.ShowDialog();
-        }
-
-        private void rbBtnLogin_Click(object sender, EventArgs e)
+        #region "Menu button"
+        private void rbBtnLogin_ItemClick(object sender, ItemClickEventArgs e)
         {
             var frm = new FormLogin();
             if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                this.Login(frm.User);
+                
+                FrmChonCa chonCa = new FrmChonCa();
+                if (chonCa.ShowDialog() == DialogResult.OK)
+                {
+                    this.Login(frm.User);
+                }
+                else {
+                    Logout();
+                }
             }
         }
-
-        private void rbBtnLogout_Click(object sender, EventArgs e)
+        
+        private void rbBtnLogout_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (GymFitnessOlympic.View.Utils.DialogUtils.ShowOKCancel("Bạn có chắc chắn muốn đăng xuất không?") == System.Windows.Forms.DialogResult.OK)
             {
@@ -127,43 +139,132 @@ namespace GymFitnessOlympic.View
             }
         }
 
-        private void ribbonOrbOptionButton2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void rbBtnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbBtnChangePassword_Click(object sender, EventArgs e)
+        private void rbBtnChangePassword_ItemClick(object sender, ItemClickEventArgs e)
         {
             var frm = new FormChangePassword(User);
             frm.ShowDialog();
         }
 
-        private void rbBtnQLPhongTap_Click(object sender, EventArgs e)
+        private void rbBtnInfo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var frm = new FormAbout();
+            frm.ShowDialog();
+        }
+        
+        private void rbBtnExit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadUcWelcome();
+        }
+        #region "Ribon bar button"
+        private void rbBtnQLPhongTap_ItemClick(object sender, ItemClickEventArgs e)
         {
             var UC = new QLPhongTap();
             LoadUC(UC);
         }
 
-        private void rbBtnQLNhanVien_Click(object sender, EventArgs e)
+        private void rbBtnQLNhanVien_ItemClick(object sender, ItemClickEventArgs e)
         {
             var UC = new QLNhanVien();
             LoadUC(UC);
         }
+        #endregion
 
-        private void rbBtnQLHoiVien_Click(object sender, EventArgs e)
+        private void rbBtnQLHoiVien_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var UC = new QLHoiVien();
-            LoadUC(UC);
+            LoadUC(new QLHoiVien());
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void rbBtnQLGoiTap_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadUcWelcome();
+            LoadUC(new QLGoiTap());
+        }
+
+        private void rbBtnQLSanPham_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new QLSanPham());
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmCheckinNhanVien());
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmCheckOutNhanVien());
+        }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmCheckinHoiVien());
+        }
+
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmBanHang());
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmLichSuNhanVien());
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmLichSuHoiVien());
+        }
+
+        private void barButtonItem16_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmSinhNhat());
+        }
+
+        private void rbBtnQLPhieuThu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var pt = new FrmLichSuPhieuThu();
+            LoadUC(pt);
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void rbBtnThongKeHoaDon_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmLichSuHoaDon());
+        }
+
+        private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var acc = Login1.GetTaiKhoanHienTai();
+            LoadUC(new FrmLichSuPhieuThu(acc ));
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmLichSuHoaDon(Login1.TaiKhoanHienTai));
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmBanHang());
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmBanHang(isNhap:true));
+        }
+
+        private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadUC(new FrmKiemKho());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace GymFitnessOlympic.Models.Mapping
                 this.HasKey(t => t.MaNhanVien);
                 //Các cột
                 this.Property(t => t.UserName).IsRequired().HasMaxLength(50);
-                this.Property(t => t.Password).IsRequired().HasMaxLength(30);
+                this.Property(t => t.Password).IsRequired();
                 this.Property(t => t.TenNhanVien).IsRequired().HasMaxLength(50);
 
                 this.ToTable("NhanVien");

@@ -8,14 +8,15 @@ using System.Windows.Forms;
 using GymFitnessOlympic.Controller;
 using GymFitnessOlympic.Models;
 using GymFitnessOlympic.View.Utils;
+using GymFitnessOlympic.Models.Util;
 
 namespace GymFitnessOlympic.View.Systems
 {
     public partial class FormLogin : BaseDialog
     {
         private const string HKEYAPP = "HKEY_CURRENT_USER\\Software\\GymFitness";
-        private AppUser m_User = null;
-        public AppUser User
+        private NhanVien m_User = null;
+        public NhanVien User
         {
             get { return m_User; }
             private set { m_User = value; }
@@ -35,6 +36,9 @@ namespace GymFitnessOlympic.View.Systems
                 this.ActiveControl = txtMatKhau;
             else
                 this.ActiveControl = txtTenDangNhap;
+            //test
+            txtMatKhau.Text = txtTenDangNhap.Text = "admin";
+            btnDongY_Click(null, null);
         }
 
         private void btnDongY_Click(object sender, EventArgs e)
@@ -45,7 +49,7 @@ namespace GymFitnessOlympic.View.Systems
             var bw = new BackgroundWorker();
             bw.DoWork += (oSender, oE) =>
             {
-                oE.Result = AppUserController.GetUser(tenDangNhap, matKhau);
+                oE.Result = NhanVienController.Login(tenDangNhap, matKhau);
             };
             bw.RunWorkerCompleted += (oSender, oE) =>
             {
@@ -59,7 +63,7 @@ namespace GymFitnessOlympic.View.Systems
                 }
                 else
                 {
-                    if (oE.Result == null || !(oE.Result is AppUser))
+                    if (oE.Result == null || !(oE.Result is NhanVien))
                     {
                         Utils.DialogUtils.ShowMessage("Thông tin đăng nhập không hợp lệ");
                         txtMatKhau.Clear();
@@ -67,20 +71,21 @@ namespace GymFitnessOlympic.View.Systems
                     }
                     else //if (this.NguoiSuDung != null)
                     {
-                        this.User = oE.Result as AppUser;
+                        this.User = oE.Result as NhanVien;
+                        Login1.TaiKhoanHienTai = User;
                         //Kiểm tra người sử dụng còn có quyến sử dụng hệ thống hay không
-                        if (this.User.IsActive == false)
-                        {
-                            Utils.DialogUtils.ShowMessage("Bạn đã bị thu quyền sử dụng trên hệ thống.\n\rVui lòng liên hệ với quản trị viên");
-                            txtMatKhau.Clear();
-                            txtTenDangNhap.Focus();
-                            this.User = null;
-                        }
-                        else
-                        {
+                        //if (this.User.IsActive == false)
+                        //{
+                        //    Utils.DialogUtils.ShowMessage("Bạn đã bị thu quyền sử dụng trên hệ thống.\n\rVui lòng liên hệ với quản trị viên");
+                        //    txtMatKhau.Clear();
+                        //    txtTenDangNhap.Focus();
+                        //    this.User = null;
+                        //}
+                        //else
+                        //{
                             this.DialogResult = System.Windows.Forms.DialogResult.OK;
                             this.Close();
-                        }
+                        //}
                     }
                 }
             };

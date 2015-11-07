@@ -36,9 +36,9 @@
             this.rbBtnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.rbBtnChangePassword = new DevExpress.XtraBars.BarButtonItem();
             this.rbBtnRole = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
-            this.barWorkspaceMenuItem1 = new DevExpress.XtraBars.BarWorkspaceMenuItem();
+            this.rbBtnInfo = new DevExpress.XtraBars.BarButtonItem();
+            this.rbBtnUpdate = new DevExpress.XtraBars.BarButtonItem();
+            this.rbBtnExit = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.rbBtnQLPhongTap = new DevExpress.XtraBars.BarButtonItem();
@@ -52,7 +52,6 @@
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
@@ -66,7 +65,9 @@
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.barWorkspaceMenuItem2 = new DevExpress.XtraBars.BarWorkspaceMenuItem();
+            this.rbBtnThongKeHoaDon = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.rbTabManager = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -82,6 +83,7 @@
             this.pnMain = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblLoginStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Menu)).BeginInit();
             this.pnMain.SuspendLayout();
@@ -94,7 +96,6 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.barWorkspaceMenuItem1,
             this.barButtonItem1,
             this.barCheckItem1,
             this.rbBtnQLPhongTap,
@@ -108,7 +109,6 @@
             this.barButtonItem9,
             this.barButtonItem10,
             this.barButtonItem11,
-            this.barButtonItem12,
             this.barButtonItem13,
             this.barButtonItem14,
             this.barButtonItem15,
@@ -126,11 +126,14 @@
             this.barSubItem1,
             this.rbBtnChangePassword,
             this.rbBtnRole,
-            this.barButtonItem28,
-            this.barButtonItem29,
-            this.barWorkspaceMenuItem2});
+            this.rbBtnInfo,
+            this.rbBtnUpdate,
+            this.rbBtnExit,
+            this.rbBtnThongKeHoaDon,
+            this.barButtonItem2,
+            this.barButtonItem3});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 37;
+            this.ribbonControl.MaxItemId = 43;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbTabManager,
@@ -138,7 +141,7 @@
             this.rbTabStatistics,
             this.rbTabHelp});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl.Size = new System.Drawing.Size(918, 143);
+            this.ribbonControl.Size = new System.Drawing.Size(918, 144);
             this.ribbonControl.Toolbar.ItemLinks.Add(this.rbBtnLoginQuick);
             this.ribbonControl.Toolbar.ItemLinks.Add(this.rbBtnLogoutQuick);
             // 
@@ -149,11 +152,11 @@
             this.Menu.ItemLinks.Add(this.rbBtnLogout);
             this.Menu.ItemLinks.Add(this.rbBtnChangePassword);
             this.Menu.ItemLinks.Add(this.rbBtnRole);
-            this.Menu.ItemLinks.Add(this.barButtonItem28);
-            this.Menu.ItemLinks.Add(this.barButtonItem29);
+            this.Menu.ItemLinks.Add(this.rbBtnInfo);
+            this.Menu.ItemLinks.Add(this.rbBtnUpdate);
+            this.Menu.ItemLinks.Add(this.rbBtnExit);
             this.Menu.Name = "Menu";
             this.Menu.Ribbon = this.ribbonControl;
-            this.Menu.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.False;
             this.Menu.ShowRightPane = true;
             // 
             // rbBtnLogin
@@ -162,6 +165,7 @@
             this.rbBtnLogin.Glyph = global::GymFitnessOlympic.Properties.Resources.loginlarge;
             this.rbBtnLogin.Id = 29;
             this.rbBtnLogin.Name = "rbBtnLogin";
+            this.rbBtnLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnLogin_ItemClick);
             // 
             // rbBtnLogout
             // 
@@ -169,6 +173,7 @@
             this.rbBtnLogout.Glyph = global::GymFitnessOlympic.Properties.Resources.logoutlarge;
             this.rbBtnLogout.Id = 30;
             this.rbBtnLogout.Name = "rbBtnLogout";
+            this.rbBtnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnLogout_ItemClick);
             // 
             // rbBtnChangePassword
             // 
@@ -176,6 +181,7 @@
             this.rbBtnChangePassword.Glyph = global::GymFitnessOlympic.Properties.Resources.changepassword;
             this.rbBtnChangePassword.Id = 32;
             this.rbBtnChangePassword.Name = "rbBtnChangePassword";
+            this.rbBtnChangePassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnChangePassword_ItemClick);
             // 
             // rbBtnRole
             // 
@@ -184,25 +190,27 @@
             this.rbBtnRole.Id = 33;
             this.rbBtnRole.Name = "rbBtnRole";
             // 
-            // barButtonItem28
+            // rbBtnInfo
             // 
-            this.barButtonItem28.Caption = "Thông tin";
-            this.barButtonItem28.Glyph = global::GymFitnessOlympic.Properties.Resources.about;
-            this.barButtonItem28.Id = 34;
-            this.barButtonItem28.Name = "barButtonItem28";
+            this.rbBtnInfo.Caption = "Thông tin";
+            this.rbBtnInfo.Glyph = global::GymFitnessOlympic.Properties.Resources.about;
+            this.rbBtnInfo.Id = 34;
+            this.rbBtnInfo.Name = "rbBtnInfo";
+            this.rbBtnInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnInfo_ItemClick);
             // 
-            // barButtonItem29
+            // rbBtnUpdate
             // 
-            this.barButtonItem29.Caption = "Cập nhật";
-            this.barButtonItem29.Glyph = global::GymFitnessOlympic.Properties.Resources.update;
-            this.barButtonItem29.Id = 35;
-            this.barButtonItem29.Name = "barButtonItem29";
+            this.rbBtnUpdate.Caption = "Cập nhật";
+            this.rbBtnUpdate.Glyph = global::GymFitnessOlympic.Properties.Resources.update;
+            this.rbBtnUpdate.Id = 35;
+            this.rbBtnUpdate.Name = "rbBtnUpdate";
             // 
-            // barWorkspaceMenuItem1
+            // rbBtnExit
             // 
-            this.barWorkspaceMenuItem1.Caption = "barWorkspaceMenuItem1";
-            this.barWorkspaceMenuItem1.Id = 1;
-            this.barWorkspaceMenuItem1.Name = "barWorkspaceMenuItem1";
+            this.rbBtnExit.Caption = "Thoát";
+            this.rbBtnExit.Id = 39;
+            this.rbBtnExit.Name = "rbBtnExit";
+            this.rbBtnExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnExit_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -223,6 +231,7 @@
             this.rbBtnQLPhongTap.Id = 4;
             this.rbBtnQLPhongTap.Name = "rbBtnQLPhongTap";
             this.rbBtnQLPhongTap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.rbBtnQLPhongTap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnQLPhongTap_ItemClick);
             // 
             // rbBtnQLNhanVien
             // 
@@ -231,6 +240,7 @@
             this.rbBtnQLNhanVien.Id = 5;
             this.rbBtnQLNhanVien.Name = "rbBtnQLNhanVien";
             this.rbBtnQLNhanVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.rbBtnQLNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnQLNhanVien_ItemClick);
             // 
             // rbBtnQLHoiVien
             // 
@@ -239,6 +249,7 @@
             this.rbBtnQLHoiVien.Id = 7;
             this.rbBtnQLHoiVien.Name = "rbBtnQLHoiVien";
             this.rbBtnQLHoiVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.rbBtnQLHoiVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnQLHoiVien_ItemClick);
             // 
             // rbBtnQLGoiTap
             // 
@@ -247,6 +258,7 @@
             this.rbBtnQLGoiTap.Id = 8;
             this.rbBtnQLGoiTap.Name = "rbBtnQLGoiTap";
             this.rbBtnQLGoiTap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.rbBtnQLGoiTap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnQLGoiTap_ItemClick);
             // 
             // rbBtnQLSanPham
             // 
@@ -255,6 +267,7 @@
             this.rbBtnQLSanPham.Id = 9;
             this.rbBtnQLSanPham.Name = "rbBtnQLSanPham";
             this.rbBtnQLSanPham.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.rbBtnQLSanPham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnQLSanPham_ItemClick);
             // 
             // rbBtnQLPhieuThu
             // 
@@ -263,6 +276,7 @@
             this.rbBtnQLPhieuThu.Id = 10;
             this.rbBtnQLPhieuThu.Name = "rbBtnQLPhieuThu";
             this.rbBtnQLPhieuThu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.rbBtnQLPhieuThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnQLPhieuThu_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -271,6 +285,7 @@
             this.barButtonItem7.Id = 11;
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -279,6 +294,7 @@
             this.barButtonItem8.Id = 12;
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 
@@ -287,6 +303,7 @@
             this.barButtonItem9.Id = 13;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -295,6 +312,7 @@
             this.barButtonItem10.Id = 14;
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // barButtonItem11
             // 
@@ -303,14 +321,7 @@
             this.barButtonItem11.Id = 15;
             this.barButtonItem11.Name = "barButtonItem11";
             this.barButtonItem11.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barButtonItem12
-            // 
-            this.barButtonItem12.Caption = "Bán hàng";
-            this.barButtonItem12.Glyph = global::GymFitnessOlympic.Properties.Resources.buy;
-            this.barButtonItem12.Id = 16;
-            this.barButtonItem12.Name = "barButtonItem12";
-            this.barButtonItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
             // 
             // barButtonItem13
             // 
@@ -319,6 +330,7 @@
             this.barButtonItem13.Id = 17;
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -327,10 +339,12 @@
             this.barButtonItem14.Id = 18;
             this.barButtonItem14.Name = "barButtonItem14";
             this.barButtonItem14.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // barButtonItem15
             // 
             this.barButtonItem15.Caption = "Check out";
+            this.barButtonItem15.Enabled = false;
             this.barButtonItem15.Glyph = global::GymFitnessOlympic.Properties.Resources.checkout;
             this.barButtonItem15.Id = 19;
             this.barButtonItem15.Name = "barButtonItem15";
@@ -343,6 +357,7 @@
             this.barButtonItem16.Id = 20;
             this.barButtonItem16.Name = "barButtonItem16";
             this.barButtonItem16.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
             // 
             // barButtonItem17
             // 
@@ -351,6 +366,7 @@
             this.barButtonItem17.Id = 21;
             this.barButtonItem17.Name = "barButtonItem17";
             this.barButtonItem17.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
             // 
             // barButtonItem18
             // 
@@ -410,11 +426,32 @@
             this.barSubItem1.Name = "barSubItem1";
             this.barSubItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
-            // barWorkspaceMenuItem2
+            // rbBtnThongKeHoaDon
             // 
-            this.barWorkspaceMenuItem2.Caption = "Thoát";
-            this.barWorkspaceMenuItem2.Id = 36;
-            this.barWorkspaceMenuItem2.Name = "barWorkspaceMenuItem2";
+            this.rbBtnThongKeHoaDon.Caption = "Hóa đơn";
+            this.rbBtnThongKeHoaDon.Glyph = global::GymFitnessOlympic.Properties.Resources.statistics2;
+            this.rbBtnThongKeHoaDon.Id = 40;
+            this.rbBtnThongKeHoaDon.Name = "rbBtnThongKeHoaDon";
+            this.rbBtnThongKeHoaDon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.rbBtnThongKeHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rbBtnThongKeHoaDon_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Bán hàng";
+            this.barButtonItem2.Glyph = global::GymFitnessOlympic.Properties.Resources.buy;
+            this.barButtonItem2.Id = 41;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Nhập hàng";
+            this.barButtonItem3.Glyph = global::GymFitnessOlympic.Properties.Resources.package;
+            this.barButtonItem3.Id = 42;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // rbTabManager
             // 
@@ -424,6 +461,7 @@
             this.ribbonPageGroup4});
             this.rbTabManager.Name = "rbTabManager";
             this.rbTabManager.Text = "Quản lý phòng GYM";
+            this.rbTabManager.Visible = false;
             // 
             // ribbonPageGroup1
             // 
@@ -445,9 +483,8 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.rbBtnQLPhieuThu);
+            this.ribbonPageGroup4.ItemLinks.Add(this.rbBtnThongKeHoaDon);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem8);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Thống kê";
             // 
@@ -459,6 +496,7 @@
             this.ribbonPageGroup6});
             this.rbTabOperator.Name = "rbTabOperator";
             this.rbTabOperator.Text = "Tác nghiệp";
+            this.rbTabOperator.Visible = false;
             // 
             // ribbonPageGroup2
             // 
@@ -469,7 +507,8 @@
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem13);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Sản phẩm";
@@ -488,6 +527,7 @@
             this.ribbonPageGroup7});
             this.rbTabStatistics.Name = "rbTabStatistics";
             this.rbTabStatistics.Text = "Thống kê";
+            this.rbTabStatistics.Visible = false;
             // 
             // ribbonPageGroup7
             // 
@@ -515,16 +555,16 @@
             // 
             this.pnMain.Controls.Add(this.statusStrip1);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(0, 143);
+            this.pnMain.Location = new System.Drawing.Point(0, 144);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(918, 285);
+            this.pnMain.Size = new System.Drawing.Size(918, 284);
             this.pnMain.TabIndex = 2;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblLoginStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 263);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 262);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(918, 22);
             this.statusStrip1.TabIndex = 1;
@@ -535,6 +575,15 @@
             this.lblLoginStatus.Name = "lblLoginStatus";
             this.lblLoginStatus.Size = new System.Drawing.Size(71, 17);
             this.lblLoginStatus.Text = "Login status";
+            // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "Bán hàng";
+            this.barButtonItem12.Glyph = global::GymFitnessOlympic.Properties.Resources.buy;
+            this.barButtonItem12.Id = 16;
+            this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
             // MainForm
             // 
@@ -557,9 +606,10 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
+
+        
 
         #endregion
 
@@ -567,7 +617,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage rbTabManager;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbTabOperator;
-        private DevExpress.XtraBars.BarWorkspaceMenuItem barWorkspaceMenuItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
@@ -588,7 +637,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
@@ -609,11 +657,15 @@
         private DevExpress.XtraBars.Ribbon.ApplicationMenu Menu;
         private DevExpress.XtraBars.BarButtonItem rbBtnChangePassword;
         private DevExpress.XtraBars.BarButtonItem rbBtnRole;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem28;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem29;
-        private DevExpress.XtraBars.BarWorkspaceMenuItem barWorkspaceMenuItem2;
+        private DevExpress.XtraBars.BarButtonItem rbBtnInfo;
+        private DevExpress.XtraBars.BarButtonItem rbBtnUpdate;       
         private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblLoginStatus;
+        private DevExpress.XtraBars.BarButtonItem rbBtnExit;
+        private DevExpress.XtraBars.BarButtonItem rbBtnThongKeHoaDon;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }

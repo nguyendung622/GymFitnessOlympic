@@ -10,11 +10,17 @@ namespace GymFitnessOlympic.Controller
 {
     class HoaDonController
     {
-        internal static List<HoaDon> GetList()
+        internal static List<HoaDon> GetList(int maPhong = -1, NhanVien manv = null)
         {
             using (var context = DBContext.GetContext())
             {
-                var nvs = context.HoaDon.Include(n => n.DanhSachChiTiet);            
+                var nvs = context.HoaDon.Include(n => n.DanhSachChiTiet).Include(h=>h.NhanVien.PhongTap);
+                if (maPhong != -1) {
+                    nvs = nvs.Where(n => n.NhanVien.PhongTap.MaPhongTap == maPhong);
+                }
+                if (manv != null) {
+                    nvs = nvs.Where(n => n.NhanVien.MaNhanVien == manv.MaNhanVien);
+                }
                 return nvs.ToList();
             }
         }

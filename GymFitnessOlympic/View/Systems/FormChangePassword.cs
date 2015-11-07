@@ -9,18 +9,19 @@ using System.Windows.Forms;
 using GymFitnessOlympic.Controller;
 using GymFitnessOlympic.Models;
 using GymFitnessOlympic.View.Utils;
+using GymFitnessOlympic.Models.Util;
 
 
 namespace GymFitnessOlympic.View.Systems
 {
     public partial class FormChangePassword : BaseDialog
     {
-        private AppUser m_NguoiSuDung;
+        private NhanVien m_NguoiSuDung;
 
-        public FormChangePassword(AppUser nguoiSuDung)
+        public FormChangePassword(NhanVien nguoiSuDung)
         {
             InitializeComponent();
-
+            nguoiSuDung = Login1.GetTaiKhoanHienTai();
             if (nguoiSuDung == null)
             {
                 throw new Exception("Tham số nguoiSuDung == NULL!");
@@ -28,7 +29,7 @@ namespace GymFitnessOlympic.View.Systems
             else
             {
                 txtTenDangNhap.Text = nguoiSuDung.UserName;
-                cbxVaiTro.Text = nguoiSuDung._Description;
+                cbxVaiTro.SelectedValue = nguoiSuDung.Quyen.MaQuyen;
                 txtMatKhau.Focus();
                 m_NguoiSuDung = nguoiSuDung;
             }
@@ -40,7 +41,8 @@ namespace GymFitnessOlympic.View.Systems
             string matKhauMoi = txtMatKhauMoi.Text;
             string matKhauMoi2 = txtMatKhauMoi2.Text;
             errorNotity.Clear();
-            if (matKhauCu != m_NguoiSuDung.Password)
+            var matKhauCuHash = CryptoMd5.MD5Hash(matKhauCu);
+            if (matKhauCuHash != m_NguoiSuDung.Password)
             {
                 errorNotity.SetError(txtMatKhau, "Mật khẩu cũ không đúng!");
                 txtMatKhau.Focus();
@@ -56,7 +58,7 @@ namespace GymFitnessOlympic.View.Systems
 
             try
             {
-                AppUserController.ChangePassword(m_NguoiSuDung, matKhauMoi);
+                NhanVienController.ChangePassword(m_NguoiSuDung, matKhauMoi);
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
             }
             catch

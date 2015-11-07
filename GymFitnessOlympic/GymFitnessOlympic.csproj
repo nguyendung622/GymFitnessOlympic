@@ -80,14 +80,86 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AppUserController.cs" />
+    <Compile Include="Controller\CaLamViecController.cs" />
+    <Compile Include="Controller\ConfigController.cs" />
     <Compile Include="Controller\Constants.cs" />
-    <Compile Include="Models\AppUser.cs" />
-    <Compile Include="Models\AppUser_Extension.cs" />
+    <Compile Include="Controller\GiamGiaController.cs" />
+    <Compile Include="Controller\GoiTapController.cs" />
+    <Compile Include="Controller\HistoryHoiVienController .cs" />
+    <Compile Include="Controller\HistoryNhanVienController.cs" />
+    <Compile Include="Controller\HoaDonController.cs" />
+    <Compile Include="Controller\HoiVienController.cs" />
+    <Compile Include="Controller\KeyValueController.cs" />
+    <Compile Include="Controller\NhanVienController.cs" />
+    <Compile Include="Controller\PhieuThuController.cs" />
+    <Compile Include="Controller\PhongTapController.cs" />
+    <Compile Include="Controller\QuyenController.cs" />
+    <Compile Include="Controller\SanPhamController.cs" />
+    <Compile Include="Migrations\201510250147552_mg1.cs" />
+    <Compile Include="Migrations\201510250147552_mg1.Designer.cs">
+      <DependentUpon>201510250147552_mg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250154294_mg2.cs" />
+    <Compile Include="Migrations\201510250154294_mg2.Designer.cs">
+      <DependentUpon>201510250154294_mg2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250155526_mg3.cs" />
+    <Compile Include="Migrations\201510250155526_mg3.Designer.cs">
+      <DependentUpon>201510250155526_mg3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250158264_mg4.cs" />
+    <Compile Include="Migrations\201510250158264_mg4.Designer.cs">
+      <DependentUpon>201510250158264_mg4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510250210406_mg5.cs" />
+    <Compile Include="Migrations\201510250210406_mg5.Designer.cs">
+      <DependentUpon>201510250210406_mg5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\entity\AppUser.cs" />
+    <Compile Include="Models\entity\AppUser_Extension.cs" />
+    <Compile Include="Models\entity\CaLamViec.cs" />
+    <Compile Include="Models\entity\ChiTietHoaDon.cs" />
+    <Compile Include="Models\DataFiller\DataFiller.cs" />
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\DBContext_Helper.cs" />
-    <Compile Include="Models\KeyValueConfig.cs" />
+    <Compile Include="Models\entity\GiamGia.cs" />
+    <Compile Include="Models\entity\GoiTap.cs" />
+    <Compile Include="Models\entity\HistoryNhanVien.cs" />
+    <Compile Include="Models\entity\HistotyHoiVien.cs" />
+    <Compile Include="Models\entity\HoaDon.cs" />
+    <Compile Include="Models\entity\HoaDon_Extension.cs" />
+    <Compile Include="Models\entity\HoiVien.cs" />
+    <Compile Include="Models\entity\HoiVien_Extention.cs" />
+    <Compile Include="Models\entity\KeyValueConfig.cs" />
     <Compile Include="Models\Mapping\AppUserMap.cs" />
+    <Compile Include="Models\Mapping\CaLamViecMap.cs" />
+    <Compile Include="Models\Mapping\ChiTietHoaDonMap.cs" />
+    <Compile Include="Models\Mapping\GiamGiaMap.cs" />
+    <Compile Include="Models\Mapping\GoiTapMap.cs" />
+    <Compile Include="Models\Mapping\HistoryHoiVienMap.cs" />
+    <Compile Include="Models\Mapping\HistoryNhanVienMap.cs" />
+    <Compile Include="Models\Mapping\HoaDonMap.cs" />
+    <Compile Include="Models\Mapping\HoiVienMap.cs" />
     <Compile Include="Models\Mapping\KeyValueConfigMap.cs" />
+    <Compile Include="Models\Mapping\NhanVienMap.cs" />
+    <Compile Include="Models\Mapping\PhieuThuMap.cs" />
+    <Compile Include="Models\Mapping\PhongTapMap.cs" />
+    <Compile Include="Models\Mapping\QuyenMap.cs" />
+    <Compile Include="Models\Mapping\SanPhamMap.cs" />
+    <Compile Include="Models\entity\NhanVien.cs" />
+    <Compile Include="Models\entity\PhieuThu.cs" />
+    <Compile Include="Models\entity\PhongTap.cs" />
+    <Compile Include="Models\entity\Quyen.cs" />
+    <Compile Include="Models\entity\QuyenExtension.cs" />
+    <Compile Include="Models\entity\SanPham.cs" />
+    <Compile Include="Models\Util\BindingHelper.cs" />
+    <Compile Include="Models\Util\CryptoMd5.cs" />
+    <Compile Include="Models\Util\DateTimeUtil.cs" />
+    <Compile Include="Models\Util\FileUpload.cs" />
+    <Compile Include="Models\Util\Login.cs" />
+    <Compile Include="Models\Util\StreamUtilities.cs" />
+    <Compile Include="Models\Util\Validation\SoDienThoaiVL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -96,17 +168,156 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utils\ConnectionUtils.cs" />
+    <Compile Include="View\ActForm\Checkin\HoiVien\FrmCheckInHoiVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\Checkin\HoiVien\FrmCheckInHoiVien.Designer.cs">
+      <DependentUpon>FrmCheckInHoiVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\Checkin\NhanVien\FrmCheckinNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\Checkin\NhanVien\FrmCheckinNhanVien.Designer.cs">
+      <DependentUpon>FrmCheckinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\Checkin\NhanVien\FrmCheckOutNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\Checkin\NhanVien\FrmCheckOutNhanVien.Designer.cs">
+      <DependentUpon>FrmCheckOutNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\FrmBanHang1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\FrmBanHang1.Designer.cs">
+      <DependentUpon>FrmBanHang1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\FrmKiemKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\FrmKiemKho.Designer.cs">
+      <DependentUpon>FrmKiemKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\FrmQLyHoiVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\FrmQLyHoiVien.Designer.cs">
+      <DependentUpon>FrmQLyHoiVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\FrmQLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\FrmQLyNhanVien.Designer.cs">
+      <DependentUpon>FrmQLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\FrmSinhNhat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\FrmSinhNhat.Designer.cs">
+      <DependentUpon>FrmSinhNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuHoaDon.Designer.cs">
+      <DependentUpon>FrmLichSuHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuHoiVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuHoiVien.Designer.cs">
+      <DependentUpon>FrmLichSuHoiVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuNhanVien.Designer.cs">
+      <DependentUpon>FrmLichSuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuPhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ActForm\ThongKe\FrmLichSuPhieuThu.Designer.cs">
+      <DependentUpon>FrmLichSuPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BanHang\FrmBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\BanHang\FrmBanHang.designer.cs">
+      <DependentUpon>FrmBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BanHang\FrmChiTietEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BanHang\FrmChiTietEdit.designer.cs">
+      <DependentUpon>FrmChiTietEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BanHang\HelperBanHang.cs" />
+    <Compile Include="View\Dialog\FrmCaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmCaEdit.Designer.cs">
+      <DependentUpon>FrmCaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmCaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmCaList.Designer.cs">
+      <DependentUpon>FrmCaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmCauHinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmCauHinh.Designer.cs">
+      <DependentUpon>FrmCauHinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmChiTietEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmChiTietEdit.Designer.cs">
+      <DependentUpon>FrmChiTietEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmChonCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmChonCa.Designer.cs">
+      <DependentUpon>FrmChonCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmGiaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmGiaHan.Designer.cs">
+      <DependentUpon>FrmGiaHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmGoiTapEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmGoiTapEdit.Designer.cs">
+      <DependentUpon>FrmGoiTapEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmHoiVienEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmHoiVienEdit.Designer.cs">
+      <DependentUpon>FrmHoiVienEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmNhanVienEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmNhanVienEdit.Designer.cs">
+      <DependentUpon>FrmNhanVienEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FrmSanPhamEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dialog\FrmSanPhamEdit.Designer.cs">
+      <DependentUpon>FrmSanPhamEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Systems\FormAbout.cs">
       <SubType>Form</SubType>
@@ -132,6 +343,12 @@
     <Compile Include="View\Systems\FormSetConnectionString.designer.cs">
       <DependentUpon>FormSetConnectionString.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControls\QuanLy\QLGoiTap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\QuanLy\QLGoiTap.Designer.cs">
+      <DependentUpon>QLGoiTap.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControls\QuanLy\QLHoiVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +366,18 @@
     </Compile>
     <Compile Include="View\UserControls\QuanLy\QLPhongTap.Designer.cs">
       <DependentUpon>QLPhongTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\QuanLy\QLSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\QuanLy\QLSanPham.Designer.cs">
+      <DependentUpon>QLSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\QuanLy\RibbonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\QuanLy\RibbonForm1.Designer.cs">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\ThongKe\TKPhieuThu.cs">
       <SubType>UserControl</SubType>
@@ -176,17 +405,101 @@
     </Compile>
     <Compile Include="View\Utils\DialogUtils.cs" />
     <Compile Include="View\Utils\WinFormsUtils.cs" />
+    <EmbeddedResource Include="Migrations\201510250147552_mg1.resx">
+      <DependentUpon>201510250147552_mg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250154294_mg2.resx">
+      <DependentUpon>201510250154294_mg2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250155526_mg3.resx">
+      <DependentUpon>201510250155526_mg3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250158264_mg4.resx">
+      <DependentUpon>201510250158264_mg4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250210406_mg5.resx">
+      <DependentUpon>201510250210406_mg5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\Checkin\HoiVien\FrmCheckInHoiVien.resx">
+      <DependentUpon>FrmCheckInHoiVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\Checkin\NhanVien\FrmCheckinNhanVien.resx">
+      <DependentUpon>FrmCheckinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\Checkin\NhanVien\FrmCheckOutNhanVien.resx">
+      <DependentUpon>FrmCheckOutNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\FrmBanHang1.resx">
+      <DependentUpon>FrmBanHang1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\FrmKiemKho.resx">
+      <DependentUpon>FrmKiemKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\FrmQLyHoiVien.resx">
+      <DependentUpon>FrmQLyHoiVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\FrmQLyNhanVien.resx">
+      <DependentUpon>FrmQLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\FrmSinhNhat.resx">
+      <DependentUpon>FrmSinhNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\ThongKe\FrmLichSuHoaDon.resx">
+      <DependentUpon>FrmLichSuHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\ThongKe\FrmLichSuHoiVien.resx">
+      <DependentUpon>FrmLichSuHoiVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\ThongKe\FrmLichSuNhanVien.resx">
+      <DependentUpon>FrmLichSuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActForm\ThongKe\FrmLichSuPhieuThu.resx">
+      <DependentUpon>FrmLichSuPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BanHang\FrmBanHang.resx">
+      <DependentUpon>FrmBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BanHang\FrmChiTietEdit.resx">
+      <DependentUpon>FrmChiTietEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmCaEdit.resx">
+      <DependentUpon>FrmCaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmCaList.resx">
+      <DependentUpon>FrmCaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmCauHinh.resx">
+      <DependentUpon>FrmCauHinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmChiTietEdit.resx">
+      <DependentUpon>FrmChiTietEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmChonCa.resx">
+      <DependentUpon>FrmChonCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmGiaHan.resx">
+      <DependentUpon>FrmGiaHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmGoiTapEdit.resx">
+      <DependentUpon>FrmGoiTapEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmHoiVienEdit.resx">
+      <DependentUpon>FrmHoiVienEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmNhanVienEdit.resx">
+      <DependentUpon>FrmNhanVienEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dialog\FrmSanPhamEdit.resx">
+      <DependentUpon>FrmSanPhamEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Systems\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
@@ -200,6 +513,9 @@
     <EmbeddedResource Include="View\Systems\FormSetConnectionString.resx">
       <DependentUpon>FormSetConnectionString.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\QuanLy\QLGoiTap.resx">
+      <DependentUpon>QLGoiTap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\QuanLy\QLHoiVien.resx">
       <DependentUpon>QLHoiVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +524,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\QuanLy\QLPhongTap.resx">
       <DependentUpon>QLPhongTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\QuanLy\QLSanPham.resx">
+      <DependentUpon>QLSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\QuanLy\RibbonForm1.resx">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\ThongKe\TKPhieuThu.resx">
       <DependentUpon>TKPhieuThu.cs</DependentUpon>
@@ -236,6 +558,7 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="Resources\about.png" />
+    <Content Include="res\DB 7-11.sql" />
     <None Include="Resources\add.png" />
     <Content Include="Resources\background.png" />
     <Content Include="Resources\birthday.png" />

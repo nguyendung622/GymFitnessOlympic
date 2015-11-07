@@ -59,7 +59,6 @@ namespace GymFitnessOlympic.Controller
                 {
                     hvc.DiaChi = hv.DiaChi;
                     hvc.TenPhongTap = hv.TenPhongTap;
-                  
                     db.SaveChanges();
                     return CODE_RESULT_RETURN.ThanhCong;
                 }
@@ -74,11 +73,22 @@ namespace GymFitnessOlympic.Controller
                 var pt = context.PhongTap.FirstOrDefault(p => p.MaPhongTap == id);
                 if (pt != null)
                 {
+                    var sps = context.SanPham.Where(s => s.MaPhongTap == id);
+                    foreach (var sp in sps) {
+                        context.SanPham.Remove(sp);
+                    }
                     context.PhongTap.Remove(pt);
                     context.SaveChanges();
                     return CODE_RESULT_RETURN.ThanhCong;
                 }
                 return CODE_RESULT_RETURN.ThatBai;
+            }
+        }
+
+        internal static List<PhongTap> GetList()
+        {
+            using (var db = DBContext.GetContext()) {
+                return db.PhongTap.ToList();
             }
         }
     }

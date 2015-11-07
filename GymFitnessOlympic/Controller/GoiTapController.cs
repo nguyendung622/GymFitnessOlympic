@@ -35,15 +35,16 @@ namespace GymFitnessOlympic.Controller
 
         internal static CODE_RESULT_RETURN Add(GoiTap sp)
         {
-            using (var context = DBContext.GetContext())
+            using (var db = DBContext.GetContext())
             {
                 try
                 {
-                    var n1 = context.GoiTap.FirstOrDefault(n => n.MaGoiTap == sp.MaGoiTap);
+                    var n1 = db.GoiTap.FirstOrDefault(n => n.MaGoiTap == sp.MaGoiTap);
                     if (n1 == null)
                     {
-                        context.GoiTap.Add(sp);
-                        context.SaveChanges();
+                        sp.PhongTap = db.PhongTap.Find(sp.PhongTap.MaPhongTap);
+                        db.GoiTap.Add(sp);
+                        db.SaveChanges();
                         return CODE_RESULT_RETURN.ThanhCong;
                     }
                     return CODE_RESULT_RETURN.MaTrung;
@@ -59,13 +60,14 @@ namespace GymFitnessOlympic.Controller
         {
             using (var db = DBContext.GetContext())
             {
-                var hvc = db.GoiTap.FirstOrDefault(h => h.MaGoiTap  == hv.MaGoiTap);
-                if (hvc != null)
+                var goiCU = db.GoiTap.FirstOrDefault(h => h.MaGoiTap  == hv.MaGoiTap);
+                if (goiCU != null)
                 {
-                    hvc.SoThang = hv.SoThang;
-                    hvc.TenGoiTap = hv.TenGoiTap;
-                    hvc.Gia = hv.Gia;
-                    hvc.Type = hv.Type;
+                    goiCU.SoThang = hv.SoThang;
+                    goiCU.TenGoiTap = hv.TenGoiTap;
+                    goiCU.Gia = hv.Gia;
+                    goiCU.Type = hv.Type;
+                    goiCU.PhongTap = db.PhongTap.Find(hv.PhongTap.MaPhongTap);
                     db.SaveChanges();
                     return CODE_RESULT_RETURN.ThanhCong;
                 }
