@@ -356,7 +356,6 @@ D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\GymFitnessOlympic
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\GymFitnessOlympic.pdb
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\EntityFramework.dll
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\EntityFramework.SqlServer.dll
-D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\System.Windows.Forms.Ribbon35.dll
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.XtraTreeList.v15.1.dll
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.Persistent.Base.v15.1.dll
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.XtraVerticalGrid.v15.1.dll
@@ -380,7 +379,6 @@ D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.XtraGa
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.XtraCharts.v15.1.Wizard.dll
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.XtraCharts.v15.1.dll
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.Charts.v15.1.Core.dll
-D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\System.Windows.Forms.Ribbon35.pdb
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.Data.v15.1.xml
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.ExpressApp.v15.1.xml
 D:\github\commit\GymFitnessOlympic\GymFitnessOlympic\bin\Debug\DevExpress.ExpressApp.Win.v15.1.xml

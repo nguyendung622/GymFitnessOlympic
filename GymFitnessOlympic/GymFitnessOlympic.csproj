@@ -543,7 +543,9 @@
     <EmbeddedResource Include="View\Utils\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -596,12 +598,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\UserControls\TacNghiep\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\System.Windows.Forms.Ribbon\System.Windows.Forms.Ribbon35.csproj">
-      <Project>{46A18A55-5AE8-49CE-91CD-C7421B642E7E}</Project>
-      <Name>System.Windows.Forms.Ribbon35</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
